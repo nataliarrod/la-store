@@ -2,19 +2,19 @@ export const landingRoute = '/';
 
 export const labelsNavBar = [
   {
-    name: "Quienes somos",
-    url: "/about-us",
+    name: "inicio",
+    url: "/home",
   },
   {
-    name: "Servicios",
-    url: "/services",
+    name: "tienda virtual",
+    url: "/shop",
   },
   {
-    name: "Planes",
-    url: "/plans",
+    name: "sobre mí",
+    url: "/about",
   },
   {
-    name: "Contactenos",
+    name: "contacto",
     url: "/contact-us",
   },
 ];
