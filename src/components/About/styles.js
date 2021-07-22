@@ -12,7 +12,7 @@ const useStyles = makeStyles(() => ({
     width: '1440px',
     backgroundSize: 'auto',
     backgroundRepeat: 'no-repeat',
-    backgroundImage: 'url(https://firebasestorage.googleapis.com/v0/b/la-store-5dcee.appspot.com/o/clouds.png?alt=media&token=f9fb820e-fc67-4727-830b-c75c6144f692)',
+    backgroundImage: 'url(https://firebasestorage.googleapis.com/v0/b/la-store-5dcee.appspot.com/o/clouds.png?alt=media&token=a87613ee-17a5-4f31-b8ca-e07b611c9e17)',
   },
   aboutContainer: {
     display: 'flex',

@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 
-const backGround = '#e18ef5';
+const backGround = 'white';
 
 const useStyles = makeStyles(() => ({
   root: {
