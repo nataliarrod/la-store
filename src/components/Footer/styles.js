@@ -1,11 +1,14 @@
 import { makeStyles } from '@material-ui/core';
 
-const carrouselBackGround = '#d1d5d4';
+const backGround = '#a9acf1';
 
 const useStyles = makeStyles(() => ({
   root: {
-    backgroundColor: carrouselBackGround,
-    textAlign: 'center',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: backGround,
+    height: '100px',
   },
 }));
 
