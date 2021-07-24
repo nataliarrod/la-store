@@ -22,9 +22,10 @@ const useStyles = makeStyles(() => ({
     '& > p': {
       fontFamily: 'Poppins',
       textAlign: 'right',
-      fontSize: '16px',
+      fontSize: '19px',
       color: 'gray',
       paddingLeft: '50px',
+      fontWeight: '500',
     },
   },
 }));
