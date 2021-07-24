@@ -1,12 +1,20 @@
 import { makeStyles } from '@material-ui/core';
 
-const aboutBackGround = '#d3c1e7';
-
 const useStyles = makeStyles(() => ({
-  root: {
-    backgroundColor: aboutBackGround,
-    textAlign: 'center',
-    
+  mainCarrouselContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginTop: '50px',
+  },
+  carrrouselComponent: {
+    width: '1440px',
+  },
+  imagesCarrouselContainer: {
+    height: '480px',
+    '& > img': {
+      width: '100%',
+      objectFit: 'fill',
+    },
   },
 }));
 
