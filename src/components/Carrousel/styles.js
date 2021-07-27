@@ -4,7 +4,6 @@ const useStyles = makeStyles(() => ({
   mainCarrouselContainer: {
     display: 'flex',
     justifyContent: 'center',
-    marginTop: '50px',
   },
   carrrouselComponent: {
     width: '1440px',
