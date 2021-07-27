@@ -1,6 +1,6 @@
 import React from 'react'
 import Carrousel from '../../components/Carrousel';
-import NewArrivals from '../../components/NewArrivals';
+import FeaturedProducts from '../../components/FeaturedProducts';
 import About from '../../components/About';
 import Contact from '../../components/Contact';
 import Footer from '../../components/Footer';
@@ -9,7 +9,7 @@ const LandingContainer = () => {
   return (
     <div>
       <Carrousel />
-      <NewArrivals />
+      <FeaturedProducts />
       <About />
       <Contact />
       <Footer />
