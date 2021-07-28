@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
     width: '1440px',
   },
   imagesCarrouselContainer: {
-    height: '480px',
+    height: '369px',
     '& > img': {
       width: '100%',
       objectFit: 'fill',

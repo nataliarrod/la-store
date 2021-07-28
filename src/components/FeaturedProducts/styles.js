@@ -33,19 +33,6 @@ const useStyles = makeStyles(() => ({
     color: 'gray',
     justifyContent: 'center'
   },
-  productCard: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '16%',
-    textTransform: 'capitalize',
-    fontSize: '13px',
-    '& > h4': {
-      margin: '10px 0px 5px ',
-
-    },
-  },
 }));
 
 export default useStyles;
