@@ -9,7 +9,7 @@ const About = () => {
 
   return (
     <Parallax bgImage={backgroundAbout} strength={500}>
-      <div className={classes.root} style={{ height: 400 }}>
+      <div id="about" className={classes.root} style={{ height: 400 }}>
         <div className={classes.aboutImage}>
           <img
             src={aboutImage}

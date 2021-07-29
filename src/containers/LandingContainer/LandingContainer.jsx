@@ -3,7 +3,6 @@ import Carrousel from '../../components/Carrousel';
 import FeaturedProducts from '../../components/FeaturedProducts';
 import About from '../../components/About';
 import Contact from '../../components/Contact';
-import Footer from '../../components/Footer';
 
 const LandingContainer = () => {
   return (
@@ -12,7 +11,6 @@ const LandingContainer = () => {
       <FeaturedProducts />
       <About />
       <Contact />
-      <Footer />
     </div>
   )
 };

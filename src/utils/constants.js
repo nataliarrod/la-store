@@ -1,5 +1,7 @@
 export const landingRoute = '/';
 export const shopRoute = '/tienda';
+export const shoppingCartRoute = '/carrito-de-compras';
+
 export const imagebanner = 'https://firebasestorage.googleapis.com/v0/b/la-store-5dcee.appspot.com/o/bannershop.png?alt=media&token=fcd0aabf-ee64-4ce6-ba50-96e84409d49c';
 
 export const labelsNavBar = [
@@ -13,23 +15,23 @@ export const labelsNavBar = [
   },
   {
     name: "sobre mí",
-    url: "/acerca-de-mi",
+    url: "/#about",
   },
   {
     name: "contacto",
-    url: "/contacto",
+    url: "/#contacto",
   },
 ];
 
 const URL_IMAGES = [
   {
-    url: "https://firebasestorage.googleapis.com/v0/b/la-store-5dcee.appspot.com/o/descuentos.png?alt=media&token=6b5787d3-ba1a-486e-945c-28a63fa28691",
+    url: "https://firebasestorage.googleapis.com/v0/b/la-store-5dcee.appspot.com/o/descuentos.png?alt=media&token=c7d4be55-3141-4526-bcff-b5d6a6d9281b",
   },
   {
-    url: "https://firebasestorage.googleapis.com/v0/b/la-store-5dcee.appspot.com/o/oraculo%20medico.png?alt=media&token=78b72d3c-0f23-4bfc-a430-67060f05ce26",
+    url: "https://firebasestorage.googleapis.com/v0/b/la-store-5dcee.appspot.com/o/oraculo%20medico.png?alt=media&token=1c5206a1-394a-4a3e-b0e8-63d3e07d3a5c",
   },
   {
-    url: "https://firebasestorage.googleapis.com/v0/b/la-store-5dcee.appspot.com/o/botellas%20(2).png?alt=media&token=560e2266-dc03-4bc7-92a0-5dd56e97e175",
+    url: "https://firebasestorage.googleapis.com/v0/b/la-store-5dcee.appspot.com/o/botellas.png?alt=media&token=7c17370e-18ab-4321-89cb-b1299cd3687b",
   },
 ];
 

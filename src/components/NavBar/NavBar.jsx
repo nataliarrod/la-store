@@ -1,4 +1,5 @@
 import React from "react";
+import  { useHistory } from "react-router-dom";
 import Logo from "../../assets/img/logo.png";
 import {
   Instagram,
@@ -7,11 +8,17 @@ import {
   LocalMallOutlined,
 } from "@material-ui/icons";
 import { IconButton, Grid } from "@material-ui/core";
-import { labelsNavBar } from "../../utils/constants";
+import { labelsNavBar, shoppingCartRoute } from "../../utils/constants";
 import useStyles from "./styles";
 
 const NavBar = () => {
   const classes = useStyles();
+  const History = useHistory();
+
+  const redirect = () => {
+    History.push(shoppingCartRoute);
+  };
+
   return (
     <Grid container xs={12} className={classes.root} alignItems="center">
       <Grid item xs={1} className={classes.logoContainer}>
@@ -59,7 +66,7 @@ const NavBar = () => {
         >
           <YouTube fontSize="small" />
         </IconButton>
-        <IconButton aria-label="icono de carrito de compras">
+        <IconButton onClick={redirect} aria-label="icono de carrito de compras">
           <LocalMallOutlined fontSize="small" />
         </IconButton>
       </Grid>

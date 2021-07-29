@@ -6,7 +6,7 @@ import useStyles from "./styles";
 const Contact = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div id="contacto" className={classes.root}>
       <div className={classes.textContainer}>
         <h2>contáctame</h2>
         <p>lineaancestral@hotmail.com</p>
