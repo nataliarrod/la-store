@@ -5,7 +5,7 @@ const useStyles = makeStyles(() => ({
     margin: '0px -24px',
     padding: '50px 20px 20px',
     fontFamily: 'Poppins',
-    color: 'gray',
+    color: 'gray'
   },
   productCard: {
     borderRadius: '10px'

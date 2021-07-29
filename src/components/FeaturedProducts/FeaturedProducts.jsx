@@ -1,7 +1,8 @@
 import React from "react";
-import useStyles from "./styles";
 import ProductCard from "../../components/ProductCard";
+import { shopRoute } from "../../utils/constants";
 import { featuredProductsMockup } from "../../utils/constants";
+import useStyles from "./styles";
 
 const FeaturedProducts = () => {
   const classes = useStyles();
@@ -9,7 +10,7 @@ const FeaturedProducts = () => {
     <div className={classes.root}>
       <div className={classes.textContainer}>
         <h3>productos destacados</h3>
-        <span>ver todos</span>
+        <a href={shopRoute} aria-describedby="link para ver todos los productos">ver todos</a>
       </div>
       <div className={classes.productsContainer}>
         {featuredProductsMockup.map((product) => {

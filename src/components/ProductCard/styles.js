@@ -15,10 +15,10 @@ const useStyles = makeStyles(() => ({
     },
     '& > img': {
       maxWidth: '120px',
-      objectFit: 'cover',
+      objectFit: 'cover'
     },
     '& > input': {
-      width: '100%',
+      width: '100%'
     },
   },
   actions: {
@@ -28,18 +28,19 @@ const useStyles = makeStyles(() => ({
     marginTop: '10px',
     '& input::-webkit-outer-spin-button': {
       display: 'none',
-      margin: 0,
+      margin: 0
     },
     '& input::-webkit-inner-spin-button': {
       display: 'none',
-      margin: 0,
+      margin: 0
     },
     '& input': {
-      textAlign: 'center',
+      textAlign: 'center'
     }
   },
   button: {
-    marginTop: '15px'
+    marginTop: '15px',
+    backgroundColor: '#d91c84'
   }
 }));
 

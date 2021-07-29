@@ -10,7 +10,7 @@ const useStyles = makeStyles(() => ({
     alignItems: 'center',
     backgroundColor: backGround,
     height: '500px',
-    fontFamily: 'Poppins',
+    fontFamily: 'Poppins'
   },
   textContainer: {
     display: 'flex',
@@ -21,7 +21,7 @@ const useStyles = makeStyles(() => ({
       textTransform: 'capitalize',
       fontFamily: 'Dancing Script',
       fontSize: '50px',
-      color: '#bb5391',
+      color: '#d91c84',
       margin: '15px 0px 5px 0px'
     },
     '& > p': {
@@ -36,11 +36,11 @@ const useStyles = makeStyles(() => ({
     width: 'auto',
     '& .MuiInputBase-root': {
       width: '500px',
-      height: '60px',
+      height: '60px'
     },
   },
   buttonGrad: {
-    background: '#bb5391',
+    background: '#d91c84',
     borderRadius: '50px',
     color: 'white',
     height: 48,
@@ -49,7 +49,7 @@ const useStyles = makeStyles(() => ({
     margin: '30px 0px',
     fontFamily: 'Poppins',
     '&:hover':{
-      backgroundColor: '#b63281',
+      backgroundColor: '#b63281'
     }
   },
 }));

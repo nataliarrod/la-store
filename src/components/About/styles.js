@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles(() => ({
   root: {
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   textAboutContainer: {
     height: '100%',
@@ -13,7 +13,7 @@ const useStyles = makeStyles(() => ({
     paddingRight: '50px',
     '& > h2': {
       fontFamily: 'Dancing Script',
-      color: '#bb3382',
+      color: '#d91c84',
       fontSize: '60px',
       textTransform: 'capitalize',
       margin: '35px 0px',
@@ -25,7 +25,7 @@ const useStyles = makeStyles(() => ({
       fontSize: '19px',
       color: 'gray',
       paddingLeft: '50px',
-      fontWeight: '500',
+      fontWeight: '500'
     },
   },
 }));

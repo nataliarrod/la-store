@@ -20,8 +20,8 @@ function Carrousel() {
     <div className={classes.mainCarrouselContainer}>
       <Carousel
         className={classes.carrrouselComponent}
-        NextIcon={<PlayArrowIcon/>}
-        PrevIcon={<PlayArrowIcon style={{transform: "rotate(-180deg)"}}/>}
+        NextIcon={<PlayArrowIcon aria-label="flecha para siguiente imagen"/>}
+        PrevIcon={<PlayArrowIcon aria-label="flecha para imagen anterior" style={{transform: "rotate(-180deg)"}}/>}
         navButtonsProps={{
           style: {
               backgroundColor: 'rgba(203,169,205,0.3)',

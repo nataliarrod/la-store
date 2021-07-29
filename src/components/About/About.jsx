@@ -1,8 +1,8 @@
 import React from "react";
-import useStyles from "./styles";
 import { Parallax } from "react-parallax";
 import aboutImage from "../../assets/img/aboutImage.png";
 import backgroundAbout from "../../assets/img/backgroundAbout.png";
+import useStyles from "./styles";
 
 const About = () => {
   const classes = useStyles();
@@ -13,7 +13,7 @@ const About = () => {
         <div className={classes.aboutImage}>
           <img
             src={aboutImage}
-            alt="imagen-diana-rodriguez"
+            alt="imagen diana rodriguez"
             height="400px"
             width="500px"
           />

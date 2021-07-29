@@ -8,7 +8,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   textContainer: {
-    backgroundColor: 'rgba(255, 255, 255, 0.4)',
+    backgroundColor: 'rgba(255, 255, 255, 0.6)',
     textAlign: 'center',
     width: '300px',
     borderRadius: '40px',
@@ -17,17 +17,17 @@ const useStyles = makeStyles(() => ({
     right: '100px',
     '& > h2': {
       fontFamily: 'Dancing Script',
-      color: '#bb3382',
+      color: '#d91c84',
       fontSize: '40px',
       textTransform: 'capitalize',
-      margin: '0px',
+      margin: '0px'
     },
     '& > h3': {
       fontFamily: 'Poppins',
       color: '#63615E',
       fontSize: '18px',
       textTransform: 'capitalize',
-      margin: '0px',
+      margin: '0px'
     },
   },
 }));

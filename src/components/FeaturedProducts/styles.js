@@ -7,7 +7,7 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     backgroundColor: backGround,
-    height: '350px',
+    height: '350px'
   },
   textContainer: {
     display: 'flex',
@@ -15,11 +15,11 @@ const useStyles = makeStyles(() => ({
     '& > h3': {
       margin: '20px 0px 40px 20px',
       fontFamily: 'Dancing Script',
-      color: '#bb3382',
+      color: '#d91c84',
       fontSize: '40px',
       textTransform: 'capitalize'
     },
-    '& > span': {
+    '& > a': {
       margin: '20px 20px 0px 0px',
       fontFamily: 'Poppins',
       color: 'gray',

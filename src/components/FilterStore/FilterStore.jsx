@@ -1,6 +1,6 @@
 import { React } from "react";
-import useStyles from "./styles";
 import { Checkbox, FormGroup, FormControlLabel, Paper } from "@material-ui/core";
+import useStyles from "./styles";
 
 const FilterStore = (props) => {
   const { state, handleChange } = props;
@@ -17,6 +17,8 @@ const FilterStore = (props) => {
               onChange={handleChange}
               name="checkedA"
               color="secondary"
+              aria-describedby= "checkbox para filtrar las categorias "
+              aria-checked="false"
             />
           }
           label="velas"
@@ -28,6 +30,8 @@ const FilterStore = (props) => {
               onChange={handleChange}
               name="checkedB"
               color="secondary"
+              aria-describedby= "checkbox para filtrar las categorias "
+              aria-checked="false"
             />
           }
           label="oráculos"
@@ -39,6 +43,8 @@ const FilterStore = (props) => {
               onChange={handleChange}
               name="checkedC"
               color="secondary"
+              aria-describedby= "checkbox para filtrar las categorias "
+              aria-checked="false"
             />
           }
           label="cursos"
@@ -50,6 +56,8 @@ const FilterStore = (props) => {
               onChange={handleChange}
               name="checkedD"
               color="secondary"
+              aria-describedby= "checkbox para filtrar las categorias "
+              aria-checked="false"
             />
           }
           label="cuarzos"
@@ -61,6 +69,8 @@ const FilterStore = (props) => {
               onChange={handleChange}
               name="checkedE"
               color="secondary"
+              aria-describedby= "checkbox para filtrar las categorias "
+              aria-checked="false"
             />
           }
           label="joyería"

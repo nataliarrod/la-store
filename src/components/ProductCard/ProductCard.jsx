@@ -24,7 +24,7 @@ const ProductCard = (props) => {
     <div className={classes.productCard} key={product.id}>
       <img
         src={product.url}
-        alt="featured product"
+        alt="foto del producto"
         width="150px"
         height="150px"
       />
@@ -43,14 +43,14 @@ const ProductCard = (props) => {
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start" className={classes.actions}>
-                  <IconButton size="small" onClick={substractProduct}> 
+                  <IconButton aria-label="icono remover productos" size="small" onClick={substractProduct}> 
                     <RemoveIcon />
                   </IconButton>
                 </InputAdornment>
               ),
               endAdornment: (
                 <InputAdornment position="end" className={classes.actions}>
-                  <IconButton size="small" onClick={addProduct}>
+                  <IconButton aria-label="icono agregar productos" size="small" onClick={addProduct}>
                     <AddIcon />
                   </IconButton>
                 </InputAdornment>
@@ -63,8 +63,8 @@ const ProductCard = (props) => {
             color="secondary"
             className={classes.button}
             size="small"
-            aria-label="add to shopping cart"
-            endIcon={<ShoppingCartIcon aria-label="shopping cart icon">send</ShoppingCartIcon>}
+            aria-label="agregar productos al carrito"
+            endIcon={<ShoppingCartIcon aria-label="icono carrito de compras">send</ShoppingCartIcon>}
           >
             agregar al carrito
           </Button>
