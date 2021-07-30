@@ -1,35 +1,43 @@
 import React from "react";
 import { Button, Grid } from "@material-ui/core";
-import GeneralTable from "../GeneralTable"
+import GeneralTable from "../GeneralTable";
+import EmptyCart from "../EmptyCart";
 import useStyles from "./styles";
 
-const ShoppingCart = ({nextStep, list}) => {
+const ShoppingCart = ({ nextStep, list }) => {
   const classes = useStyles();
+  const isEmpty = !!list.length;
 
   return (
-    <>
-      <h2>carrito de compras</h2>
-      <GeneralTable list={list}/>
-      <Grid
-        container
-        direction="row-reverse"
-        className={classes.buttonContainer}
-      >
-        <Grid item xs={4} align="right">
-          <span className={classes.totalCount}>
-            <strong>total:</strong> $ 200.000
-          </span>
-        </Grid>
-        <Grid item xs={4}>
-          <Button onClick={nextStep} size="small" variant="contained">
-            finalizar compra
-          </Button>
-          <Button size="small" variant="contained">
-            vaciar carrito
-          </Button>
-        </Grid>
-      </Grid>
-    </>
+    <div className={classes.root}>
+      {isEmpty ? (
+        <>
+          <h2>carrito de compras</h2>
+          <GeneralTable list={list} />
+          <Grid
+            container
+            direction="row-reverse"
+            className={classes.buttonContainer}
+          >
+            <Grid item xs={4} align="right">
+              <span className={classes.totalCount}>
+                <strong>total:</strong> $ 200.000
+              </span>
+            </Grid>
+            <Grid item xs={4}>
+              <Button onClick={nextStep} size="small" variant="contained">
+                finalizar compra
+              </Button>
+              <Button size="small" variant="contained">
+                vaciar carrito
+              </Button>
+            </Grid>
+          </Grid>
+        </>
+      ) : (
+        <EmptyCart />
+      )}
+    </div>
   );
 };
 
