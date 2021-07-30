@@ -1,7 +1,7 @@
-import React, {useState} from "react";
-import ShoppingCartTable from "../../components/ShoppingCartTable";
+import React, { useState } from "react";
+import ShoppingCart from "../../components/ShoppingCart";
 import Checkout from "../../components/Checkout";
-import { Button, Grid } from "@material-ui/core";
+import { featuredProductsMockup } from "../../utils/constants";
 import useStyles from "./styles";
 
 const OrderContainer = () => {
@@ -13,30 +13,8 @@ const OrderContainer = () => {
   };
   return (
     <div className={classes.root}>
-      {
-        step === 1 && (
-          <>
-            <h2>carrito de compras</h2>
-            <ShoppingCartTable />
-            <Grid container direction="row-reverse" className={classes.buttonContainer}>
-              <Grid item xs={4} align="right">
-                <span className={classes.totalCount}><strong>total:</strong> $ 200.000</span>
-              </Grid>
-              <Grid item xs={4}>
-                <Button onClick={nextStep} size="small" variant="contained">finalizar compra</Button>
-                <Button size="small" variant="contained">vaciar carrito</Button>
-              </Grid>
-            </Grid>
-          </>
-        )
-      }
-      {
-        step === 2 && (
-          <>
-            <Checkout />
-          </>
-        )
-      }
+      {step === 1 && <ShoppingCart nextStep={nextStep} list={featuredProductsMockup} />}
+      {step === 2 && <Checkout />}
     </div>
   );
 };

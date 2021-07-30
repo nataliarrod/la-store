@@ -1,6 +1,6 @@
 import React from "react";
 import  { useHistory } from "react-router-dom";
-import Logo from "../../assets/img/logo.png";
+import Logo from "../../assets/svg/logoMenu.svg";
 import {
   Instagram,
   Facebook,

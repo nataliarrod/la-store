@@ -25,13 +25,13 @@ export const labelsNavBar = [
 
 const URL_IMAGES = [
   {
-    url: "https://firebasestorage.googleapis.com/v0/b/la-store-5dcee.appspot.com/o/descuentos.png?alt=media&token=c7d4be55-3141-4526-bcff-b5d6a6d9281b",
+    url: "https://firebasestorage.googleapis.com/v0/b/la-store-5dcee.appspot.com/o/carrousel%2FbannerOraculoCarrousel.svg?alt=media&token=60df3987-bc44-4a72-a862-a8df066504d0",
   },
   {
-    url: "https://firebasestorage.googleapis.com/v0/b/la-store-5dcee.appspot.com/o/oraculo%20medico.png?alt=media&token=1c5206a1-394a-4a3e-b0e8-63d3e07d3a5c",
+    url: "https://firebasestorage.googleapis.com/v0/b/la-store-5dcee.appspot.com/o/carrousel%2FbannerDescuentosCarrousel.svg?alt=media&token=f93d32b5-0d92-44b0-981c-a678718d98c0",
   },
   {
-    url: "https://firebasestorage.googleapis.com/v0/b/la-store-5dcee.appspot.com/o/botellas.png?alt=media&token=7c17370e-18ab-4321-89cb-b1299cd3687b",
+    url: "https://firebasestorage.googleapis.com/v0/b/la-store-5dcee.appspot.com/o/carrousel%2FbannerCursosCarrousel.svg?alt=media&token=1108dcee-8788-4c90-a004-390d563523b5",
   },
 ];
 

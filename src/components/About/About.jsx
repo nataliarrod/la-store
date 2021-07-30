@@ -14,8 +14,8 @@ const About = () => {
           <img
             src={aboutImage}
             alt="imagen diana rodriguez"
-            height="400px"
-            width="500px"
+            height="450px"
+            width="520px"
           />
         </div>
         <div className={classes.textAboutContainer}>

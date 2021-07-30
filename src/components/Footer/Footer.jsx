@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/img/logo.png";
+import Logo from "../../assets/svg/logoFooter.svg";
 import { Instagram, Facebook, YouTube } from '@material-ui/icons';
 import { IconButton } from '@material-ui/core';
 
