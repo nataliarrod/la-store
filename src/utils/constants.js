@@ -1,6 +1,6 @@
 export const landingRoute = '/';
 export const shopRoute = '/tienda';
-export const shoppingCartRoute = '/carrito-de-compras';
+export const orderRoute = '/pedido';
 
 export const imagebanner = 'https://firebasestorage.googleapis.com/v0/b/la-store-5dcee.appspot.com/o/bannershop.png?alt=media&token=fcd0aabf-ee64-4ce6-ba50-96e84409d49c';
 

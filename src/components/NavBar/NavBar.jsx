@@ -8,7 +8,7 @@ import {
   LocalMallOutlined,
 } from "@material-ui/icons";
 import { IconButton, Grid } from "@material-ui/core";
-import { labelsNavBar, shoppingCartRoute } from "../../utils/constants";
+import { labelsNavBar, orderRoute } from "../../utils/constants";
 import useStyles from "./styles";
 
 const NavBar = () => {
@@ -16,7 +16,7 @@ const NavBar = () => {
   const History = useHistory();
 
   const redirect = () => {
-    History.push(shoppingCartRoute);
+    History.push(orderRoute);
   };
 
   return (

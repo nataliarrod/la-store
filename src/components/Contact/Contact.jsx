@@ -27,14 +27,14 @@ const Contact = () => {
           required
         />
         <TextField
-          type="subject"
+          type="text"
           name="contactSubject"
           placeholder="Asunto *"
           aria-describedby="escribir asunto"
           required
         />
         <TextField
-          type="message"
+          type="text"
           name="contactMessage"
           placeholder="Mensaje *"
           aria-describedby="escribir mensaje"             
