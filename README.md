@@ -1,6 +1,25 @@
-# Getting Started with Create React App
+Hi! I'm Natalia Rodriguez 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I am frontend developer and technology enthusiast.
+
+You can find all of my projects available at https://github.com/nataliarrod
+
+📫 How to reach me nataliarrod@gmail.com
+
+Connect with me:
+https://www.linkedin.com/in/natalia-r-39900a163/
+
+Linea Ancestral is a personal project for our familiar company, you can find us in our social networks facebook, instagram, youtube
+
+la-store.vercel.app
+
+Languages and Tools I used:
+css3 html5 javascript react firebase git  photoshop
+
+Dependencies
+Material UI
+React Router Dom
+Vercel
 
 ## Available Scripts
 
@@ -67,4 +86,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#n
