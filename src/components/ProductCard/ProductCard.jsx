@@ -25,7 +25,7 @@ const ProductCard = (props) => {
   };
 
   return (
-    <div className={classes.productCard} key={product.id}>
+    <div className={classes.productCard} key={product._id}>
       <img
         src={product.url}
         alt="foto del producto"

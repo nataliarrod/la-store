@@ -33,7 +33,7 @@ const GeneralTable = ({list}) => {
         </TableHead>
         <TableBody>
           {list.map((row) => (
-            <TableRow key={row.id}>
+            <TableRow key={row._id}>
               <TableCell align="center" component="th" scope="row">
                 <img
                   src={row.url}

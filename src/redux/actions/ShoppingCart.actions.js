@@ -10,7 +10,7 @@ export function shoppingCartReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_PRODUCT:
       const index = state.products.findIndex(
-        product => product.id === action.payload.id
+        product => product._id === action.payload._id
       );
       const newProducts = [...state.products];
       if (index === -1) {
@@ -31,7 +31,7 @@ export function shoppingCartReducer(state = initialState, action) {
       return {
         ...state,
         products: state.products.filter(
-          (product) => product.id !== action.payload.id
+          (product) => product._id !== action.payload._id
         ),
       }
     case EMPTY_CART:

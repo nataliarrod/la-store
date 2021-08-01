@@ -3,10 +3,9 @@ import {
   SET_STORE, SET_ERROR, TOGGLE_LOADING,
   UPDATE_PRODUCT,
  } from './types';
-import { featuredProductsMockup } from "../../utils/constants";
 
 const initialState = {
-  store: featuredProductsMockup,
+  store: [],
   error: null,
   loading: false,
 };
@@ -20,7 +19,7 @@ export function storeReducer(state = initialState, action) {
       };
     case UPDATE_PRODUCT:
       const index = state.store.findIndex(
-        product => product.id === action.payload.id
+        product => product._id === action.payload._id
       );
       const newStore = [...state.store];
       newStore[index] = action.payload;

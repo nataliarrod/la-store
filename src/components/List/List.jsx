@@ -11,9 +11,9 @@ const List = (props) => {
   const classes = useStyles();
   return (
     <Grid container spacing={3} className={classes.root}>
-      {list.map((product) => {
+      {list.map((product, index) => {
         return (
-          <Grid item xs={3}>
+          <Grid item key={`product-${index}`} xs={3}>
             <Paper className={classes.productCard}>
               <ProductCard
                 isListProduct
