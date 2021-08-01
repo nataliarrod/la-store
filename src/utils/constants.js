@@ -7,19 +7,19 @@ export const imagebanner = 'https://firebasestorage.googleapis.com/v0/b/la-store
 export const labelsNavBar = [
   {
     name: "inicio",
-    url: "/",
+    url: landingRoute,
   },
   {
     name: "tienda virtual",
-    url: "/tienda",
+    url: shopRoute,
   },
   {
     name: "sobre mí",
-    url: "/#about",
+    url: `${landingRoute}#about`,
   },
   {
     name: "contacto",
-    url: "/#contacto",
+    url: `${landingRoute}#contacto`,
   },
 ];
 
@@ -40,7 +40,7 @@ export const featuredProductsMockup = [
     id: "1",
     name: "sunglass",
     price: "1500",
-    url: "https://kozmatin.com/wp-content/uploads/2021/02/makeup_composition_overhead-732x549-thumbnail.jpg",
+    url: "https://cdn.shopify.com/s/files/1/0047/9995/5030/products/DFKSUN0820_0020_10_600x.jpg",
     maxQuantity: 5,
   },
   {

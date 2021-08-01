@@ -3,7 +3,11 @@ import { Grid, Paper } from "@material-ui/core";
 import ProductCard from "../ProductCard";
 import useStyles from "./styles";
 
-const List = ({ list }) => {
+const List = (props) => {
+  const {
+    list,
+    takeProduct,
+  } = props;
   const classes = useStyles();
   return (
     <Grid container spacing={3} className={classes.root}>
@@ -11,7 +15,11 @@ const List = ({ list }) => {
         return (
           <Grid item xs={3}>
             <Paper className={classes.productCard}>
-              <ProductCard isListProduct product={product} />
+              <ProductCard
+                isListProduct
+                takeProduct={takeProduct}
+                product={product}
+              />
             </Paper>
           </Grid>
         )

@@ -12,6 +12,9 @@ import useStyles from "./styles";
 
 const GeneralTable = ({list}) => {
   const classes = useStyles();
+
+  const calculateSubtotal = (quantity, price) => quantity * price;
+
   return (
     <TableContainer component={Paper} className={classes.root}>
       <Table
@@ -41,9 +44,9 @@ const GeneralTable = ({list}) => {
               </TableCell>
               <TableCell align="center">{row.name}</TableCell>
               <TableCell align="center">${row.price}</TableCell>
-              <TableCell align="center">{row.maxQuantity}</TableCell>
+              <TableCell align="center">{row.quantity}</TableCell>
               <TableCell align="center">
-                {Math.round(row.maxQuantity * row.price * 100) / 100}
+                {calculateSubtotal(row.quantity, row.price)}
               </TableCell>
             </TableRow>
           ))}

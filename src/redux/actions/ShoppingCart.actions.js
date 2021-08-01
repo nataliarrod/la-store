@@ -1,48 +1,58 @@
-import { getStoreProducts } from '../requests/ShoppingCart.request';
-import { SET_PRODUCTS, SET_ERROR, TOGGLE_LOADING } from '../../utils/actions';
+import {
+  ADD_PRODUCT, DELETE_PRODUCT, EMPTY_CART,
+} from './types';
 
 const initialState = {
   products: [],
-  error: null,
-  loading: false,
 };
 
-export function storeProductsReducer(state = initialState, action) {
+export function shoppingCartReducer(state = initialState, action) {
   switch (action.type) {
-    case SET_PRODUCTS:
+    case ADD_PRODUCT:
+      const index = state.products.findIndex(
+        product => product.id === action.payload.id
+      );
+      const newProducts = [...state.products];
+      if (index === -1) {
+      newProducts.push(action.payload);
+      } else {
+        const newProduct = {
+          ...newProducts[index],
+          quantity: newProducts[index].quantity + action.payload.quantity,
+        };
+
+        newProducts[index] = newProduct;
+      }
       return {
         ...state,
-        products: action.payload,
+        products: newProducts,
       };
-    case SET_ERROR:
+    case DELETE_PRODUCT:
       return {
         ...state,
-        error: action.payload,
+        products: state.products.filter(
+          (product) => product.id !== action.payload.id
+        ),
       }
-    case TOGGLE_LOADING:
+    case EMPTY_CART:
       return {
-        ...state,
-        loading: !state.loading,
-      }
+        ...initialState,
+      };
     default:
       return state;
   }
 }
 
-export const fetchStoreProducts = () => async (dispatch) => {
-  dispatch({ type: TOGGLE_LOADING });
-  const [error, data] = await getStoreProducts();
-  if (error) {
-    dispatch({
-      type: SET_ERROR,
-      payload: error,
-    });
-    return { status: 'error', resp: error };
-  }
-  dispatch({
-    type: SET_PRODUCTS,
-    payload: data,
-  });
-  dispatch({ type: TOGGLE_LOADING });
-  return { status: 'success', resp: data };
-};
+export function addProductToCart(product) {
+  return {
+    type: ADD_PRODUCT,
+    payload: product,
+  };
+}
+
+export function deleteProductToCart(product) {
+  return {
+    type: DELETE_PRODUCT,
+    payload: product,
+  };
+}

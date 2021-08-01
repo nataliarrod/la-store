@@ -6,19 +6,23 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import useStyles from "./styles";
 
 const ProductCard = (props) => {
-  const { product, isListProduct = false } = props;
+  const {
+    product,
+    isListProduct = false,
+    takeProduct,
+  } = props;
   const [quantity, setQuantity] = useState(0);
   const classes = useStyles();
 
-  const addProduct = () => {
+  const increaseQuantity = () => {
     const newQuantity = quantity < product.maxQuantity ? quantity + 1 : quantity;
     setQuantity(newQuantity);
-  }
+  };
 
-  const substractProduct = () => {
+  const decreaseQuantity = () => {
     const newQuantity = !quantity ? 0 : quantity - 1;
     setQuantity(newQuantity);
-  }
+  };
 
   return (
     <div className={classes.productCard} key={product.id}>
@@ -39,18 +43,20 @@ const ProductCard = (props) => {
             size="small"
             className={classes.textField}
             value={quantity}
+            defaultValue={0}
             onChange={(e) => setQuantity(e.target.value)}
+            disabled={!product.maxQuantity}
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start" className={classes.actions}>
-                  <IconButton aria-label="icono remover productos" size="small" onClick={substractProduct}> 
+                  <IconButton aria-label="icono remover productos" size="small" onClick={decreaseQuantity}> 
                     <RemoveIcon />
                   </IconButton>
                 </InputAdornment>
               ),
               endAdornment: (
                 <InputAdornment position="end" className={classes.actions}>
-                  <IconButton aria-label="icono agregar productos" size="small" onClick={addProduct}>
+                  <IconButton aria-label="icono agregar productos" size="small" onClick={increaseQuantity}>
                     <AddIcon />
                   </IconButton>
                 </InputAdornment>
@@ -64,7 +70,12 @@ const ProductCard = (props) => {
             className={classes.button}
             size="small"
             aria-label="agregar productos al carrito"
-            endIcon={<ShoppingCartIcon aria-label="icono carrito de compras">send</ShoppingCartIcon>}
+            endIcon={<ShoppingCartIcon aria-label="icono carrito de compras" />}
+            disabled={!product.maxQuantity}
+            onClick={() => {
+              takeProduct(product, quantity);
+              setQuantity(0);
+            }}
           >
             agregar al carrito
           </Button>

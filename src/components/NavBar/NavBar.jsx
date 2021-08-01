@@ -1,5 +1,6 @@
 import React from "react";
 import  { useHistory } from "react-router-dom";
+import { NavHashLink as NavLink } from "react-router-hash-link";
 import Logo from "../../assets/svg/logoMenu.svg";
 import {
   Instagram,
@@ -32,7 +33,13 @@ const NavBar = () => {
                 className={classes.labelLi}
                 key={`nav-bar-label-${index}`}
               >
-                <a href={label.url}>{label.name}</a>
+                <NavLink
+                  to={label.url}
+                  activeClassName="selected"
+                  activeStyle={{ color: '#d91c84' }}
+                >
+                  {label.name}
+                </NavLink>
               </li>
             );
           })}

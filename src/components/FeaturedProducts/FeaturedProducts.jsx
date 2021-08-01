@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import ProductCard from "../../components/ProductCard";
 import { shopRoute } from "../../utils/constants";
 import { featuredProductsMockup } from "../../utils/constants";
@@ -10,7 +11,12 @@ const FeaturedProducts = () => {
     <div className={classes.root}>
       <div className={classes.textContainer}>
         <h3>productos destacados</h3>
-        <a href={shopRoute} aria-describedby="link para ver todos los productos">ver todos</a>
+        <Link
+          to={shopRoute}
+          aria-describedby="ver todos los productos"
+        >
+          ver todos
+        </Link>
       </div>
       <div className={classes.productsContainer}>
         {featuredProductsMockup.map((product) => {
