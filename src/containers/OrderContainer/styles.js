@@ -6,6 +6,7 @@ const useStyles = makeStyles(() => ({
     maxWidth: '1000px',
     margin: '0px auto 50px',
     textAlign: 'center',
+    backgroundColor: '#f6f9fc',
   },
 }));
 

@@ -21,8 +21,8 @@ const StoreContainer = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchStoreProducts());
-  }, [dispatch]);
+    if (!store.length) dispatch(fetchStoreProducts());
+  }, [dispatch, store]);
 
   const handleChange = (event) => {
     const newState = { ...state };

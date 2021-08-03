@@ -36,7 +36,7 @@ const OrderContainer = () => {
   }, [products]);
 
   return (
-    <div className={classes.root}>
+    <div data-testid="order-container" className={classes.root}>
       {step === 1 && (
         <ShoppingCart
           nextStep={nextStep}
