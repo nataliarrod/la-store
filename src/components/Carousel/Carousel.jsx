@@ -8,18 +8,18 @@ import useStyles from "./styles";
 function Item(props) {
   const classes = useStyles();
   return (
-    <Paper className={classes.imagesCarrouselContainer}>
-      <img src={props.item.url} alt="imagenes de carrousel"/>
+    <Paper className={classes.imagesCarouselContainer}>
+      <img src={props.item.url} alt="imagenes del Carrousel"/>
     </Paper>
   );
 }
 
-function Carrousel() {
+function CustomCarousel() {
   const classes = useStyles();
   return (
-    <div className={classes.mainCarrouselContainer}>
+    <div className={classes.mainCarouselContainer}>
       <Carousel
-        className={classes.carrrouselComponent}
+        className={classes.carouselComponent}
         NextIcon={<PlayArrowIcon aria-label="siguiente imagen"/>}
         PrevIcon={<PlayArrowIcon aria-label="imagen anterior" style={{transform: "rotate(-180deg)"}}/>}
         navButtonsProps={{
@@ -46,4 +46,4 @@ function Carrousel() {
   );
 }
 
-export default Carrousel;
+export default CustomCarousel;

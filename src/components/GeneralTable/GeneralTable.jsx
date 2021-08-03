@@ -31,6 +31,7 @@ const GeneralTable = ({ list, deleteItem }) => {
               <TableCell align="center">precio</TableCell>
               <TableCell align="center">cantidad</TableCell>
               <TableCell align="center">subtotal</TableCell>
+              <TableCell align="center">acciones</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -50,13 +51,15 @@ const GeneralTable = ({ list, deleteItem }) => {
                 <TableCell align="center">
                   {calculateSubtotal(row.quantity, row.price)}
                 </TableCell>
-                <IconButton
-                  className={classes.deleteButton}
-                  onClick={() => deleteItem(row._id)}
-                  aria-label="borrar"
-                >
-                  <DeleteIcon fontSize="small" />
-                </IconButton>
+                <TableCell align="center">
+                  <IconButton
+                    className={classes.deleteButton}
+                    onClick={() => deleteItem(row._id)}
+                    aria-label="borrar"
+                  >
+                    <DeleteIcon fontSize="small" />
+                  </IconButton>
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>

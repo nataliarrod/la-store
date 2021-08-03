@@ -19,13 +19,13 @@ const Footer = () => {
       </div>
       <div className={classes.iconsContainer}>
         <IconButton aria-label="boton instagram" onClick={() => window.open('https://www.instagram.com/lineaancestral/', '_blank')}>
-          <Instagram fontSize="big"/>
+          <Instagram fontSize="large"/>
         </IconButton>
         <IconButton aria-label="boton facebook" onClick={() => window.open('https://www.facebook.com/LineaAncestral/', '_blank')}>
-          <Facebook fontSize="big"/>
+          <Facebook fontSize="large"/>
         </IconButton>
         <IconButton aria-label="boton youtube" onClick={() => window.open('https://www.youtube.com/channel/UCQsznHLGlY-Omrwz7kGwAhQ/about', '_blank')}>
-          <YouTube fontSize="big"/>
+          <YouTube fontSize="large"/>
         </IconButton>
       </div>
     </div>

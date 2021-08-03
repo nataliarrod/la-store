@@ -20,7 +20,7 @@ const About = () => {
         </div>
         <div className={classes.textAboutContainer}>
           <h2>sobre mí</h2>
-          <p>
+          <p data-testid="about-text">
             Soy Diana Marcela Rodríguez Cardozo. Nací con una visión y misión de
             vida clara, con la convicción de traer magia a nuestras raíces y de
             un despertar a la intuición. Quiero compartirte herramientas para que

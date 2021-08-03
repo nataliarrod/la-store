@@ -1,13 +1,13 @@
 import React from 'react'
-import Carrousel from '../../components/Carrousel';
+import Carousel from '../../components/Carousel';
 import FeaturedProducts from '../../components/FeaturedProducts';
 import About from '../../components/About';
 import Contact from '../../components/Contact';
 
 const LandingContainer = () => {
   return (
-    <div>
-      <Carrousel />
+    <div data-testid="landing-container">
+      <Carousel />
       <FeaturedProducts />
       <About />
       <Contact />

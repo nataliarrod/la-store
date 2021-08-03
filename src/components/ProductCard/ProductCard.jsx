@@ -4,14 +4,16 @@ import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import useStyles from "./styles";
+import GeneralModal from "../GeneralModal";
 
 const ProductCard = (props) => {
   const {
     product,
     isListProduct = false,
-    takeProduct,
+    takeProduct = () => {},
   } = props;
   const [quantity, setQuantity] = useState(0);
+  const [openModal, setOpenModal] = useState(false);
   const classes = useStyles();
 
   const increaseQuantity = () => {
@@ -24,8 +26,21 @@ const ProductCard = (props) => {
     setQuantity(newQuantity);
   };
 
+  const takeProductToCart = () => {
+    if (!quantity) return;
+    setOpenModal(true);
+    takeProduct(product, quantity);
+    setQuantity(0);
+  }
+
   return (
-    <div className={classes.productCard} key={product._id}>
+    <div className={classes.productCard} key={`product-card-${product._id}`}>
+      <GeneralModal
+        openModal={openModal}
+        setOpenModal={setOpenModal}
+        title={'Producto agregado'}
+        message={`Agregaste ${product.name} al carrito`}
+      />
       <img
         src={product.url}
         alt="foto del producto"
@@ -38,12 +53,11 @@ const ProductCard = (props) => {
         <>
           <TextField
             id="outlined-start-adornment"
-            ariaDescribedby="cantidad de productos para agregar al carrito"
+            aria-describedby="cantidad de productos para agregar al carrito"
             type="number"
             size="small"
             className={classes.textField}
             value={quantity}
-            defaultValue={0}
             onChange={(e) => setQuantity(e.target.value)}
             disabled={!product.maxQuantity}
             InputProps={{
@@ -72,10 +86,7 @@ const ProductCard = (props) => {
             aria-label="agregar productos al carrito"
             endIcon={<ShoppingCartIcon aria-label="icono carrito de compras" />}
             disabled={!product.maxQuantity}
-            onClick={() => {
-              takeProduct(product, quantity);
-              setQuantity(0);
-            }}
+            onClick={takeProductToCart}
           >
             agregar al carrito
           </Button>

@@ -21,7 +21,7 @@ const NavBar = () => {
   };
 
   return (
-    <Grid container xs={12} className={classes.root} alignItems="center">
+    <Grid container className={classes.root} alignItems="center">
       <Grid item xs={1} className={classes.logoContainer}>
         <img src={Logo} alt="logo linea ancestral" width="80px" height="80px" />
       </Grid>
@@ -44,7 +44,7 @@ const NavBar = () => {
       </Grid>
       <Grid item xs={2}>
         <IconButton
-          aria-label="icono de instagram "
+          aria-label="icono de instagram"
           onClick={() =>
             window.open("https://www.instagram.com/lineaancestral/", "_blank")
           }
@@ -52,7 +52,7 @@ const NavBar = () => {
           <Instagram fontSize="small" />
         </IconButton>
         <IconButton
-          aria-label="icono de facebook "
+          aria-label="icono de facebook"
           onClick={() =>
             window.open("https://www.facebook.com/LineaAncestral/", "_blank")
           }
@@ -60,7 +60,7 @@ const NavBar = () => {
           <Facebook fontSize="small" />
         </IconButton>
         <IconButton
-          aria-label="icono de youtube "
+          aria-label="icono de youtube"
           onClick={() =>
             window.open(
               "https://www.youtube.com/channel/UCQsznHLGlY-Omrwz7kGwAhQ/about",

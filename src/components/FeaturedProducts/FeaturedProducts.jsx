@@ -19,8 +19,8 @@ const FeaturedProducts = () => {
         </Link>
       </div>
       <div className={classes.productsContainer}>
-        {featuredProductsMockup.map((product) => {
-          return <ProductCard product={product} />;
+        {featuredProductsMockup.map((product, index) => {
+          return <ProductCard product={product} key={`feature-product-${index}`}/>;
         })}
       </div>
     </div>

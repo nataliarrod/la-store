@@ -1,14 +1,15 @@
 import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
-  mainCarrouselContainer: {
+  mainCarouselContainer: {
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgrounColor: '#f6f9fc',
   },
-  carrrouselComponent: {
+  carouselComponent: {
     width: '1500px',
   },
-  imagesCarrouselContainer: {
+  imagesCarouselContainer: {
     height: '450px',
     '& > img': {
       width: '100%',
