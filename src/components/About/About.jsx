@@ -9,13 +9,13 @@ const About = () => {
 
   return (
     <Parallax bgImage={backgroundAbout} strength={500}>
-      <div id="about" className={classes.root} style={{ height: 400 }}>
+      <div id="about" className={classes.root} style={{ height: 450 }}>
         <div className={classes.aboutImage}>
           <img
             src={aboutImage}
             alt="imagen diana rodriguez"
-            height="450px"
-            width="520px"
+            height="470px"
+            width="530px"
           />
         </div>
         <div className={classes.textAboutContainer}>

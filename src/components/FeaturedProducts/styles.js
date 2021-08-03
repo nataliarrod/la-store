@@ -7,7 +7,8 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     backgroundColor: backGround,
-    height: '350px'
+    height: '450px',
+    justifyContent: 'center',
   },
   textContainer: {
     display: 'flex',

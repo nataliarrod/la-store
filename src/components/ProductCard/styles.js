@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
     alignItems: 'center',
     textTransform: 'capitalize',
     fontSize: '13px',
-    padding: '20px',
+    padding: '30px',
     '& > h4': {
       margin: '10px 0px 5px ',
     },

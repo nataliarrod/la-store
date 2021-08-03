@@ -1,17 +1,37 @@
-import React from "react";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
+import React, { useState } from "react";
+import { TextField, Button } from "@material-ui/core";
+import GeneralModal from "../../components/GeneralModal";
+import { contactModal } from "../../utils/constants";
 import useStyles from "./styles";
 
 const Contact = () => {
   const classes = useStyles();
+
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setOpenModal(true)
+  };
+
   return (
     <div id="contacto" className={classes.root}>
+      <GeneralModal
+        openModal={openModal}
+        setOpenModal={setOpenModal}
+        message={contactModal.message}
+        title={contactModal.title}
+      />
       <div className={classes.textContainer}>
         <h2>contáctame</h2>
         <p>lineaancestral@hotmail.com</p>
       </div>
-      <form className={classes.formContainer} autoComplete="off">
+          
+      <form
+        onSubmit={(e) => handleSubmit(e)}
+        className={classes.formContainer}
+        autoComplete="off"
+      >
         <TextField
           type="text"
           name="contactName"
@@ -37,10 +57,14 @@ const Contact = () => {
           type="text"
           name="contactMessage"
           placeholder="Mensaje *"
-          aria-describedby="escribir mensaje"             
+          aria-describedby="escribir mensaje"
           required
         />
-        <Button className={classes.buttonGrad} classvariant="contained">
+        <Button
+          type="submit"
+          className={classes.buttonGrad}
+          classvariant="contained"
+        >
           enviar
         </Button>
       </form>

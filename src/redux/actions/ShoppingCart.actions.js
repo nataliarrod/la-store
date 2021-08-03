@@ -31,7 +31,7 @@ export function shoppingCartReducer(state = initialState, action) {
       return {
         ...state,
         products: state.products.filter(
-          (product) => product._id !== action.payload._id
+          (product) => product._id !== action.payload
         ),
       }
     case EMPTY_CART:
@@ -50,9 +50,16 @@ export function addProductToCart(product) {
   };
 }
 
-export function deleteProductToCart(product) {
+export function deleteProductToCart(productId) {
   return {
     type: DELETE_PRODUCT,
+    payload: productId,
+  };
+}
+
+export function emptyCart(product) {
+  return {
+    type: EMPTY_CART,
     payload: product,
   };
 }

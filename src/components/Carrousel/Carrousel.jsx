@@ -20,8 +20,8 @@ function Carrousel() {
     <div className={classes.mainCarrouselContainer}>
       <Carousel
         className={classes.carrrouselComponent}
-        NextIcon={<PlayArrowIcon aria-label="flecha para siguiente imagen"/>}
-        PrevIcon={<PlayArrowIcon aria-label="flecha para imagen anterior" style={{transform: "rotate(-180deg)"}}/>}
+        NextIcon={<PlayArrowIcon aria-label="siguiente imagen"/>}
+        PrevIcon={<PlayArrowIcon aria-label="imagen anterior" style={{transform: "rotate(-180deg)"}}/>}
         navButtonsProps={{
           style: {
               backgroundColor: 'rgba(203,169,205,0.3)',
@@ -37,7 +37,6 @@ function Carrousel() {
         swipe="true"
         navButtonsAlwaysVisible="true"
         cycleNavigation="true"
-        timeout={{appear: 100, enter: 100, exit: 100}}
       >
         {URL_IMAGES.map((item, i) => (
           <Item key={i} item={item} />

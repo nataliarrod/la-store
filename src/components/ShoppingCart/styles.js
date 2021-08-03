@@ -24,7 +24,7 @@ const useStyles = makeStyles(() => ({
     color: '#d91c84',
     textTransform: 'uppercase',
     fontSize: '20px',
-    marginRight: '15px'
+    marginRight: '40px'
   }
 }));
 

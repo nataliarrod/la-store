@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: backGround,
-    height: '500px',
+    height: '450px',
     fontFamily: 'Poppins'
   },
   textContainer: {

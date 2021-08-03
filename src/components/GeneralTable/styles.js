@@ -1,9 +1,10 @@
 import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
-  root: {
-    textTransform: 'capitalize',
-    width: '100%'
+  deleteButton: {
+    '& > MuiButtonBase-root': {
+      marginTop: '20px',
+    }
   },
 }));
 
