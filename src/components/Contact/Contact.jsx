@@ -36,6 +36,7 @@ const Contact = () => {
           type="text"
           name="contactName"
           placeholder="Nombre *"
+          aria-label="name"
           aria-describedby="escribir nombre completo"
           required
         />
@@ -43,6 +44,7 @@ const Contact = () => {
           type="email"
           name="contactEmail"
           placeholder="Email *"
+          aria-label="email"
           aria-describedby="escribir email"
           required
         />
@@ -50,6 +52,7 @@ const Contact = () => {
           type="text"
           name="contactSubject"
           placeholder="Asunto *"
+          aria-label="subject"
           aria-describedby="escribir asunto"
           required
         />
@@ -57,11 +60,14 @@ const Contact = () => {
           type="text"
           name="contactMessage"
           placeholder="Mensaje *"
+          aria-label="message"
           aria-describedby="escribir mensaje"
           required
         />
         <Button
           type="submit"
+          aria-label="submit"
+          aria-describedby="enviar informacion"
           className={classes.buttonGrad}
           classvariant="contained"
         >
