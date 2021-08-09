@@ -26,8 +26,11 @@ const useStyles = makeStyles(() => ({
       fontFamily: 'Poppins',
       color: 'gray',
       fontSize: '16px',
-      textTransform: 'capitalize',
+      textTransform: 'lowercase',
       textAlign: 'center',
+    },
+    '&  > p::first-letter': {
+      textTransform: 'capitalize',
     },
   },
   buttonGrad: {
