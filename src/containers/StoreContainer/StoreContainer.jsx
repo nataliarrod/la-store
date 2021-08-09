@@ -31,10 +31,10 @@ const StoreContainer = () => {
   };
 
   const takeOutStoreProduct = (product, quantity) => {
-    const newMaxQuantity = product.maxQuantity - quantity;
+    const newStock = product.stock - quantity;
     const newStoreProduct = {
       ...product,
-      maxQuantity: newMaxQuantity,
+      stock: newStock,
     }
     dispatch(updateProduct(newStoreProduct));
   };
@@ -44,7 +44,7 @@ const StoreContainer = () => {
       ...product,
       quantity: quantity
     }
-    delete newCartProduct.maxQuantity;
+    delete newCartProduct.stock;
     dispatch(addProductToCart(newCartProduct));
   };
 

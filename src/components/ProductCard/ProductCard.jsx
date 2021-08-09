@@ -17,7 +17,7 @@ const ProductCard = (props) => {
   const classes = useStyles();
 
   const increaseQuantity = () => {
-    const newQuantity = quantity < product.maxQuantity ? quantity + 1 : quantity;
+    const newQuantity = quantity < product.stock ? quantity + 1 : quantity;
     setQuantity(newQuantity);
   };
 
@@ -42,7 +42,7 @@ const ProductCard = (props) => {
         message={`Agregaste ${product.name} al carrito`}
       />
       <img
-        src={product.url}
+        src={product.image}
         alt="foto del producto"
         width="150px"
         height="150px"
@@ -59,7 +59,7 @@ const ProductCard = (props) => {
             className={classes.textField}
             value={quantity}
             onChange={(e) => setQuantity(e.target.value)}
-            disabled={!product.maxQuantity}
+            disabled={!product.stock}
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start" className={classes.actions}>
@@ -85,7 +85,7 @@ const ProductCard = (props) => {
             size="small"
             aria-label="agregar productos al carrito"
             endIcon={<ShoppingCartIcon aria-label="icono carrito de compras" />}
-            disabled={!product.maxQuantity}
+            disabled={!product.stock}
             onClick={takeProductToCart}
           >
             agregar al carrito
