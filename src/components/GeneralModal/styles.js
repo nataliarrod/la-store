@@ -26,7 +26,6 @@ const useStyles = makeStyles(() => ({
       fontFamily: 'Poppins',
       color: 'gray',
       fontSize: '16px',
-      textTransform: 'capitalize',
       textAlign: 'center',
     },
   },
