@@ -9,7 +9,7 @@ import {
   LocalMallOutlined,
 } from "@material-ui/icons";
 import { IconButton, Grid } from "@material-ui/core";
-import { orderRoute } from "../../utils/constants";
+import { orderRoute, URL_SOCIAL } from "../../utils/constants";
 import labelsNavBar from "./constants";
 import useStyles from "./styles";
 
@@ -20,6 +20,8 @@ const NavBar = () => {
   const redirect = () => {
     History.push(orderRoute);
   };
+
+  const { instagram, facebook, youtube } = URL_SOCIAL;
 
   return (
     <Grid container className={classes.root} alignItems="center">
@@ -47,7 +49,7 @@ const NavBar = () => {
         <IconButton
           aria-label="icono de instagram"
           onClick={() =>
-            window.open("https://www.instagram.com/lineaancestral/", "_blank")
+            window.open(instagram, "_blank")
           }
         >
           <Instagram fontSize="small" />
@@ -55,7 +57,7 @@ const NavBar = () => {
         <IconButton
           aria-label="icono de facebook"
           onClick={() =>
-            window.open("https://www.facebook.com/LineaAncestral/", "_blank")
+            window.open(facebook, "_blank")
           }
         >
           <Facebook fontSize="small" />
@@ -63,10 +65,7 @@ const NavBar = () => {
         <IconButton
           aria-label="icono de youtube"
           onClick={() =>
-            window.open(
-              "https://www.youtube.com/channel/UCQsznHLGlY-Omrwz7kGwAhQ/about",
-              "_blank"
-            )
+            window.open( youtube, "_blank" )
           }
         >
           <YouTube fontSize="small" />

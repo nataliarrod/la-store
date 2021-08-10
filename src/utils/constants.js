@@ -1,5 +1,3 @@
-import { Instagram } from "@material-ui/icons";
-
 export const landingRoute = '/';
 export const shopRoute = '/tienda';
 export const orderRoute = '/pedido';
@@ -81,5 +79,11 @@ export const deleteModal = {
 }
 
 export const taxes = [1.19];
+
+export const URL_SOCIAL = {
+  instagram: "https://www.instagram.com/lineaancestral/",
+  facebook: "https://www.facebook.com/LineaAncestral/",
+  youtube: "https://www.youtube.com/channel/UCQsznHLGlY-Omrwz7kGwAhQ/about"
+};
 
 export default URL_IMAGES;
