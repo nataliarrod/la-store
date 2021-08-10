@@ -9,7 +9,8 @@ import {
   LocalMallOutlined,
 } from "@material-ui/icons";
 import { IconButton, Grid } from "@material-ui/core";
-import { labelsNavBar, orderRoute } from "../../utils/constants";
+import { orderRoute } from "../../utils/constants";
+import labelsNavBar from "./constants";
 import useStyles from "./styles";
 
 const NavBar = () => {
