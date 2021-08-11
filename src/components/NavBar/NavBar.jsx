@@ -24,19 +24,19 @@ const NavBar = () => {
 
   const { instagram, facebook, youtube } = URL_SOCIAL;
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [menuOpen, setMenuOpen] = React.useState(null);
 
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+    setMenuOpen(event.currentTarget);
   };
 
   const handleClose = () => {
-    setAnchorEl(null);
+    setMenuOpen(null);
   };
 
   return (
     <Grid container className={classes.root} alignItems="center">
-      <Grid item xs={1} md={false}>
+      <Grid item xs={1}>
         <div>
           <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} aria-label="menu">
             <MenuIcon />
@@ -44,14 +44,24 @@ const NavBar = () => {
 
           <Menu
             id="simple-menu"
-            anchorEl={anchorEl}
+            anchorEl={menuOpen}
             keepMounted
-            open={Boolean(anchorEl)}
+            open={Boolean(menuOpen)}
             onClose={handleClose}
           >
-            <MenuItem onClick={handleClose}>Profile</MenuItem>
-            <MenuItem onClick={handleClose}>My account</MenuItem>
-            <MenuItem onClick={handleClose}>Logout</MenuItem>
+            {labelsNavBar.map((label, index) => {
+              return (
+                <MenuItem onClick={handleClose} className={classes.labelLi} key={`nav-bar-label-${index}`}>
+                   <NavLink
+                      to={label.url}
+                      activeClassName="selected"
+                      activeStyle={{ color: "#d91c84" }}
+                    >
+                      {label.name}
+                    </NavLink>
+                </MenuItem>
+              )
+            })}
           </Menu>
         </div>
       </Grid>
