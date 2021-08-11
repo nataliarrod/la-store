@@ -36,7 +36,7 @@ const NavBar = () => {
 
   return (
     <Grid container className={classes.root} alignItems="center">
-      <Grid item xs={1}>
+      <Grid className={classes.burgerMenu} item xs={1}>
         <div>
           <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} aria-label="menu">
             <MenuIcon />
@@ -51,11 +51,12 @@ const NavBar = () => {
           >
             {labelsNavBar.map((label, index) => {
               return (
-                <MenuItem onClick={handleClose} className={classes.labelLi} key={`nav-bar-label-${index}`}>
+                <MenuItem className={classes.labelLi} key={`nav-bar-label-${index}`}>
                    <NavLink
                       to={label.url}
                       activeClassName="selected"
                       activeStyle={{ color: "#d91c84" }}
+                      onClick={handleClose}
                     >
                       {label.name}
                     </NavLink>
@@ -65,10 +66,10 @@ const NavBar = () => {
           </Menu>
         </div>
       </Grid>
-      <Grid item xs={1} className={classes.logoContainer}>
+      <Grid className={classes.logo} item xs={3} md={1}>
         <img src={Logo} alt="logo linea ancestral" width="80px" height="80px" />
       </Grid>
-      <Grid item xs={8}>
+      <Grid className={classes.navItems} item xs={7}>
         <ul className={classes.labelUl}>
           {labelsNavBar.map((label, index) => {
             return (
@@ -85,7 +86,7 @@ const NavBar = () => {
           })}
         </ul>
       </Grid>
-      <Grid item xs={2}>
+      <Grid className={classes.social} item xs={8} md={4}>
         <IconButton
           aria-label="icono de instagram"
           onClick={() =>

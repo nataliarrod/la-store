@@ -6,7 +6,6 @@ import Store from "./pages/Store";
 import Order from "./pages/Order";
 import Layout from "./components/Layout";
 import { landingRoute, shopRoute, orderRoute } from "./utils/constants";
-// import { landingRoute, shopRoute, orderRoute } from "./components/NavBar/constants";
 
 function App() {
   return (
