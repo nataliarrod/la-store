@@ -5,15 +5,14 @@ const borderColor = '#D4D2CE';
 const useStyles = makeStyles((theme) => ({
   root: {
     borderBottom: `1px solid ${borderColor}`,
-    boxShadow: `0 0 20px 0 ${borderColor}`,
+    boxShadow: `0 0 10px 0 ${borderColor}`,
     width: "100%",
     top:"0",
     position: "fixed",
     overflow: "hidden",
     zIndex: "200",
     backgroundColor: "#FFF",
-    opacity: "0.87",
-
+    opacity: "0.88",
   },
   logo: {
     display: "flex",
