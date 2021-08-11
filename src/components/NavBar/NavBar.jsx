@@ -67,7 +67,7 @@ const NavBar = () => {
         </div>
       </Grid>
       <Grid className={classes.logo} item xs={3} md={1}>
-        <img src={Logo} alt="logo linea ancestral" width="80px" height="80px" />
+        <img src={Logo} alt="logo linea ancestral" width="60px" height="60px" />
       </Grid>
       <Grid className={classes.navItems} item xs={7}>
         <ul className={classes.labelUl}>
