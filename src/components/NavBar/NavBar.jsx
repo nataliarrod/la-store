@@ -8,7 +8,8 @@ import {
   YouTube,
   LocalMallOutlined,
 } from "@material-ui/icons";
-import { IconButton, Grid } from "@material-ui/core";
+import MenuIcon from '@material-ui/icons/Menu';
+import { IconButton, Grid, MenuItem, Menu } from "@material-ui/core";
 import { orderRoute, URL_SOCIAL } from "../../utils/constants";
 import labelsNavBar from "./constants";
 import useStyles from "./styles";
@@ -23,12 +24,41 @@ const NavBar = () => {
 
   const { instagram, facebook, youtube } = URL_SOCIAL;
 
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <Grid container className={classes.root} alignItems="center">
+      <Grid item xs={1} md={false}>
+        <div>
+          <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} aria-label="menu">
+            <MenuIcon />
+          </IconButton>
+
+          <Menu
+            id="simple-menu"
+            anchorEl={anchorEl}
+            keepMounted
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+          >
+            <MenuItem onClick={handleClose}>Profile</MenuItem>
+            <MenuItem onClick={handleClose}>My account</MenuItem>
+            <MenuItem onClick={handleClose}>Logout</MenuItem>
+          </Menu>
+        </div>
+      </Grid>
       <Grid item xs={1} className={classes.logoContainer}>
         <img src={Logo} alt="logo linea ancestral" width="80px" height="80px" />
       </Grid>
-      <Grid item xs={9}>
+      <Grid item xs={8}>
         <ul className={classes.labelUl}>
           {labelsNavBar.map((label, index) => {
             return (
