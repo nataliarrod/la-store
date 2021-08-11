@@ -1,5 +1,4 @@
-import { shopRoute } from "../../utils/constants";
-import { landingRoute } from "../../utils/constants";
+import { shopRoute, landingRoute } from "../../utils/constants";
 
 const labelsNavBar = [
   {
