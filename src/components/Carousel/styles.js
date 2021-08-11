@@ -5,6 +5,7 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     justifyContent: 'center',
     backgrounColor: '#f6f9fc',
+    marginTop: "60px",
   },
   carouselComponent: {
     width: '1500px',
