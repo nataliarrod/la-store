@@ -7,7 +7,7 @@ import Contact from '../../components/Contact';
 const LandingContainer = () => {
   return (
     <div data-testid="landing-container">
-      <Carousel />
+      {/* <Carousel /> */}
       {/* <FeaturedProducts /> */}
       <About />
       {/* <Contact /> */}
