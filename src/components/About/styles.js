@@ -12,32 +12,46 @@ const useStyles = makeStyles((theme) => ({
   },
   textAboutContainer: {
     paddingRight: "2rem",
+    [theme.breakpoints.up("sm")]: {
+      margin: "2rem 0",
+    },
+    [theme.breakpoints.up("sm")]: {
+      padding: "1.5rem",
+      alignSelf: "center",
+    },
     "& > h2": {
       fontFamily: "Dancing Script",
       color: "#d91c84",
-      fontSize: "60px",
+      fontSize: "40px",
       textTransform: "capitalize",
       textAlign: "left",
-      paddingLeft: "1rem",
+      paddingLeft: "3rem",
       margin: "1rem",
       position: "relative",
       [theme.breakpoints.up("sm")]: {
         textAlign: "right",
+        marginTop: "0",
+      },
+      [theme.breakpoints.up("md")]: {
+        marginRight: "5rem",
+        fontSize: "60px",
       },
     },
     "& > p": {
       fontFamily: "Poppins",
       textAlign: "left",
-      fontSize: "19px",
+      fontSize: "14px",
       color: "gray",
       paddingLeft: "3rem",
       fontWeight: "500",
-      marginTop: "1rem",
-      marginBottom: "0",
+      margin: "0",
       [theme.breakpoints.up("sm")]: {
-        marginBottom: "1rem",
         position: "relative",
         textAlign: "right",
+      },
+      [theme.breakpoints.up("md")]: {
+        marginRight: "3rem",
+        fontSize: "19px",
       },
     },
   },
@@ -49,6 +63,13 @@ const useStyles = makeStyles((theme) => ({
       [theme.breakpoints.up("sm")]: {
         width: "130%",
         alignSelf: "flex-end",
+      },
+      [theme.breakpoints.up("md")]: {
+        width: "100%",
+        paddingLeft: "7rem",
+      },
+      [theme.breakpoints.up("lg")]: {
+        marginBottom: "-31px",
       },
     },
   },
