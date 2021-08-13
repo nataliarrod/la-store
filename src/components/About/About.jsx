@@ -12,6 +12,9 @@ const About = () => {
   return (
     <Parallax bgImage={backgroundAbout} strength={500}>
       <Grid id="about" className={classes.root} item xs={12}>
+        <Grid className={classes.titleAboutContainer}>
+          <h2>{aboutConstants.title}</h2>
+        </Grid>
         <Grid className={classes.aboutImage}>
           <img
             src={aboutImage}
@@ -21,7 +24,6 @@ const About = () => {
           />
         </Grid>
         <Grid className={classes.textAboutContainer}>
-          <h2>{aboutConstants.title}</h2>
           <p data-testid="about-text"> {aboutConstants.content} </p>
         </Grid>
       </Grid>
