@@ -6,6 +6,7 @@ const useStyles = makeStyles(() => ({
     '& > img': {
       width: '100%',
     },
+    marginTop: '60px',
   },
   textContainer: {
     backgroundColor: 'rgba(255, 255, 255, 0.6)',
