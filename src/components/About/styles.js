@@ -4,10 +4,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     justifyContent: "center",
-    flexDirection: "column",
     marginTop: "60px",
-    [theme.breakpoints.up("md")]: {
-      flexDirection: "row",
+    flexDirection: "row-reverse",
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
     },
   },
   textAboutContainer: {
@@ -20,6 +20,10 @@ const useStyles = makeStyles((theme) => ({
       textAlign: "left",
       paddingLeft: "1rem",
       margin: "1rem",
+      position: "relative",
+      [theme.breakpoints.up("sm")]: {
+        textAlign: "right",
+      },
     },
     "& > p": {
       fontFamily: "Poppins",
@@ -30,12 +34,22 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: "500",
       marginTop: "1rem",
       marginBottom: "0",
+      [theme.breakpoints.up("sm")]: {
+        marginBottom: "1rem",
+        position: "relative",
+        textAlign: "right",
+      },
     },
   },
   aboutImage: {
+    display: "flex",
     "& > img": {
       width: "100%",
       marginBottom: "-21px",
+      [theme.breakpoints.up("sm")]: {
+        width: "130%",
+        alignSelf: "flex-end",
+      },
     },
   },
 }));
