@@ -1,13 +1,17 @@
 import { makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     justifyContent: "center",
     flexDirection: "column",
     marginTop: "60px",
+    [theme.breakpoints.up("md")]: {
+      flexDirection: "row",
+    },
   },
-  titleAboutContainer: {
+  textAboutContainer: {
+    paddingRight: "2rem",
     "& > h2": {
       fontFamily: "Dancing Script",
       color: "#d91c84",
@@ -17,9 +21,6 @@ const useStyles = makeStyles(() => ({
       paddingLeft: "1rem",
       margin: "1rem",
     },
-  },
-  textAboutContainer: {
-    paddingRight: "2rem",
     "& > p": {
       fontFamily: "Poppins",
       textAlign: "left",
@@ -35,8 +36,8 @@ const useStyles = makeStyles(() => ({
     "& > img": {
       width: "100%",
       marginBottom: "-21px",
-    }
-  }
+    },
+  },
 }));
 
 export default useStyles;
