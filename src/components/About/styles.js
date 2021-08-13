@@ -8,7 +8,7 @@ const useStyles = makeStyles(() => ({
   textAboutContainer: {
     height: '100%',
     width: '50%',
-    paddingRight: '50px',
+    paddingRight: '4rem',
     '& > h2': {
       fontFamily: 'Dancing Script',
       color: '#d91c84',
