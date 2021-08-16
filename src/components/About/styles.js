@@ -59,12 +59,14 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "16px",
       fontFamily: "Poppins",
       textAlign: "right",
-      justifyContent: "flex-end",
+      justifyContent: "flex-start",
       color: "#9C80A6",
       margin: "1rem",
+      paddingLeft: "2rem",
       [theme.breakpoints.up("sm")]: {
         position: "relative",
         textAlign: "right",
+        justifyContent: "flex-end",
       },
       [theme.breakpoints.up("md")]: {
         fontSize: "22px",
