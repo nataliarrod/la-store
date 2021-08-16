@@ -3,11 +3,11 @@ import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles(() => ({
   autoTypeInline: {
     display: "flex",
-    flexFlow: "row",
-    flexWrap: "wrap",
+    // flexFlow: "row",
+    // flexWrap: "nowrap",
   },
   wrapper: {
-    marginLeft: "10px",
+    marginLeft: "0.5rem",
   },
 }));
 

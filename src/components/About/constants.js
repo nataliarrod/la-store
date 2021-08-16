@@ -5,4 +5,9 @@ const aboutConstants = (
   }
 );
 
+export const typeWriterConstants = { 
+  professions: ['Angeologa','Medium', 'Terapeuta Holistica', 'Maestra Reiki', 'Apoteosica','Diva'],
+  complement: 'Soy',
+}
+
 export default aboutConstants;

@@ -54,6 +54,23 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "19px",
       },
     },
+    "& > span": {
+      display: "flex",
+      fontSize: "16px",
+      fontFamily: "Poppins",
+      textAlign: "right",
+      justifyContent: "flex-end",
+      color: "#9C80A6",
+      margin: "1rem",
+      [theme.breakpoints.up("sm")]: {
+        position: "relative",
+        textAlign: "right",
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: "22px",
+        marginRight: "3rem",
+      },
+    },
   },
   aboutImage: {
     display: "flex",
