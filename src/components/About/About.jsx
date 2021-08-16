@@ -5,7 +5,7 @@ import backgroundAbout from "../../assets/img/backgroundAbout.png";
 import useStyles from "./styles";
 import aboutConstants from "./constants"
 import { Grid } from "@material-ui/core";
-import Type from "../Typewriter/Typewriter";
+import AutoType from "../AutoType/AutoType";
 
 const About = () => {
   const classes = useStyles();
@@ -15,7 +15,7 @@ const About = () => {
       <Grid id="about" className={classes.root} container>
         <Grid className={classes.textAboutContainer} item xs={12} sm={6}>
           <h2>{aboutConstants.title}</h2>
-          <a><Type/></a>
+          <AutoType complement='Soy' words={['Angeologa','World']} />
           <p data-testid="about-text"> {aboutConstants.content} </p>
         </Grid>
         <Grid className={classes.aboutImage} alignContent="flexEnd" item xs={12} sm={6}>
