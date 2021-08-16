@@ -4,7 +4,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     justifyContent: "center",
-    marginTop: "60px",
     flexDirection: "row-reverse",
     [theme.breakpoints.down("xs")]: {
       flexDirection: "column",

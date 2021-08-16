@@ -7,10 +7,10 @@ import Contact from '../../components/Contact';
 const LandingContainer = () => {
   return (
     <div data-testid="landing-container">
-      {/* <Carousel /> */}
-      {/* <FeaturedProducts /> */}
+      <Carousel />
+      <FeaturedProducts />
       <About />
-      {/* <Contact /> */}
+      <Contact />
     </div>
   )
 };
