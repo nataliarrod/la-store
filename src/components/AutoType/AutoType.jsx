@@ -8,7 +8,7 @@ function AutoType({words, complement}) {
   const classes = useStyles();
 
   return (
-      <span className={classes.autoTypeInline}>
+      <span data-testid="auto-type-wrapper" className={classes.autoTypeInline}>
         {complement}
         <Typewriter
           style={{display: "inline"}}
