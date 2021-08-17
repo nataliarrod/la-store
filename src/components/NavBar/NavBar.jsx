@@ -77,7 +77,7 @@ const NavBar = () => {
         <ul className={classes.labelUl}>
           {labelsNavBar.map((label, index) => {
             return (
-              <li className={classes.labelLi} key={`nav-bar-label-${index}`}>
+              <li className={classes.labelLi} key={`nav-bar-label-${index}`} data-testid={`nav-bar-label-${index}`}>
                 <NavLink
                   to={label.url}
                   activeClassName="selected"

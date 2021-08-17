@@ -38,4 +38,17 @@ describe('Navigation Bar Component', () => {
 
     expect(screen.getAllByRole('button')).toHaveLength(5);
   });
+
+  test('render navbar links', () => {
+    render(
+      <Router>
+        <NavBar/>
+      </Router>
+    );
+
+      expect(screen.getByTestId("nav-bar-label-0")).toBeInTheDocument();
+      expect(screen.getByTestId("nav-bar-label-1")).toBeInTheDocument();
+      expect(screen.getByTestId("nav-bar-label-2")).toBeInTheDocument();
+      expect(screen.getByTestId("nav-bar-label-3")).toBeInTheDocument();
+  });
 })
