@@ -1,10 +1,18 @@
 import React from "react";
 import { Modal, Backdrop, Fade, Button } from "@material-ui/core";
 import useStyles from "./styles";
+import  { useHistory } from "react-router-dom";
+import { orderRoute } from "../../utils/constants";
+import generalModalConstants from "./constants";
 
 const GeneralModal = ({ openModal, setOpenModal, title, message }) => {
   const classes = useStyles();
-
+  const History = useHistory();
+  
+  const redirectToOrder = () => {
+    History.push(orderRoute);
+  };
+  
   return (
     <div className={classes.root}>
       <Modal
@@ -23,14 +31,24 @@ const GeneralModal = ({ openModal, setOpenModal, title, message }) => {
           <div className={classes.paper}>
             <h2>{title}</h2>
             <p>{message}</p>
-            <Button
-              className={classes.buttonGrad}
-              classvariant="contained"
-              type="button"
-              onClick={() => setOpenModal(false)}
-            >
-              cerrar
-            </Button>
+            <div className={classes.buttonsModal}>
+              <Button
+                className={classes.buttonGrad}
+                classvariant="contained"
+                type="button"
+                onClick={redirectToOrder}
+              >
+                {generalModalConstants.buttonOrder}
+              </Button>
+              <Button
+                className={classes.buttonGrad}
+                classvariant="contained"
+                type="button"
+                onClick={() => setOpenModal(false)}
+              >
+                {generalModalConstants.buttonStore}
+              </Button>
+            </div>
           </div>
         </Fade>
       </Modal>
