@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,37 +18,37 @@ const useStyles = makeStyles((theme) => ({
       padding: "1.5rem",
       alignSelf: "center",
     },
-    "& > h2": {
-      fontFamily: "Dancing Script",
-      color: "#d91c84",
-      fontSize: "40px",
+    "& > h3": {
+      fontFamily: theme.typography.fontFamilySecondary,
+      color: theme.palette.main.pink,
+      fontSize: theme.typography.h3.fontSize,
       textTransform: "capitalize",
       textAlign: "left",
       paddingLeft: "3rem",
       margin: "1rem",
       position: "relative",
-      [theme.breakpoints.up("sm")]: {
+      [theme.breakpoints.up("md")]: {
         textAlign: "right",
         marginTop: "0",
       },
-      [theme.breakpoints.up("md")]: {
+      [theme.breakpoints.up("lg")]: {
         marginRight: "5rem",
         fontSize: "60px",
       },
     },
     "& > p": {
-      fontFamily: "Poppins",
+      fontFamily: theme.typography.fontFamily,
       textAlign: "left",
-      fontSize: "14px",
-      color: "gray",
+      fontSize: theme.typography.h6.fontSize,
+      color: theme.palette.main.gray,
       paddingLeft: "3rem",
       fontWeight: "500",
       margin: "0",
-      [theme.breakpoints.up("sm")]: {
+      [theme.breakpoints.up("md")]: {
         position: "relative",
         textAlign: "right",
       },
-      [theme.breakpoints.up("md")]: {
+      [theme.breakpoints.up("lg")]: {
         marginRight: "3rem",
         fontSize: "19px",
       },
@@ -62,12 +62,12 @@ const useStyles = makeStyles((theme) => ({
       color: "#9C80A6",
       margin: "1rem",
       paddingLeft: "2rem",
-      [theme.breakpoints.up("sm")]: {
+      [theme.breakpoints.up("md")]: {
         position: "relative",
         textAlign: "right",
         justifyContent: "flex-end",
       },
-      [theme.breakpoints.up("md")]: {
+      [theme.breakpoints.up("lg")]: {
         fontSize: "22px",
         marginRight: "3rem",
       },

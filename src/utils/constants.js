@@ -78,12 +78,14 @@ export const deleteModal = {
   message: 'visita nuestra para mas opciones',
 }
 
-export const taxes = [1.19];
-
 export const URL_SOCIAL = {
   instagram: "https://www.instagram.com/lineaancestral/",
   facebook: "https://www.facebook.com/LineaAncestral/",
-  youtube: "https://www.youtube.com/channel/UCQsznHLGlY-Omrwz7kGwAhQ/about"
+  youtube: "https://www.youtube.com/channel/UCQsznHLGlY-Omrwz7kGwAhQ/about",
+  whatsapp: "https://wa.me/573214444287",
 };
+
+export const taxes = [1.19];
+
 
 export default URL_IMAGES;
