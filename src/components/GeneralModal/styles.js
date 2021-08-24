@@ -35,24 +35,7 @@ const useStyles = makeStyles(() => ({
       textTransform: "capitalize",
     },
   },
-  buttonsModal: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-  },
-  buttonGrad: {
-    width: "14rem",
-    background: "#d91c84",
-    color: "white",
-    height: "2.2rem",
-    padding: "0 30px",
-    textTransform: "uppercase",
-    margin: "0.5rem",
-    fontFamily: "Poppins",
-    "&:hover": {
-      backgroundColor: "#b63281",
-    },
-  },
+  
 }));
 
 export default useStyles;

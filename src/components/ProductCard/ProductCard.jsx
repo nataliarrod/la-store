@@ -5,6 +5,9 @@ import RemoveIcon from '@material-ui/icons/Remove';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import useStyles from "./styles";
 import GeneralModal from "../GeneralModal";
+import  { useHistory } from "react-router-dom";
+import { orderRoute } from "../../utils/constants";
+import modalConstants from "./constants";
 
 const ProductCard = (props) => {
   const {
@@ -12,6 +15,7 @@ const ProductCard = (props) => {
     isListProduct = false,
     takeProduct = () => {},
   } = props;
+  const History = useHistory();
   const [quantity, setQuantity] = useState(0);
   const [openModal, setOpenModal] = useState(false);
   const classes = useStyles();
@@ -19,6 +23,11 @@ const ProductCard = (props) => {
   const increaseQuantity = () => {
     const newQuantity = quantity < product.stock ? quantity + 1 : quantity;
     setQuantity(newQuantity);
+  };
+
+  
+  const redirectToOrder = () => {
+    History.push(orderRoute);
   };
 
   const decreaseQuantity = () => {
@@ -40,7 +49,26 @@ const ProductCard = (props) => {
         setOpenModal={setOpenModal}
         title={'Producto agregado'}
         message={`Agregaste ${product.name} al carrito`}
-      />
+      >
+        <div className={classes.buttonsModal}>
+          <Button
+            className={classes.buttonGrad}
+            classvariant="contained"
+            type="button"
+            onClick={redirectToOrder}
+          >
+            {modalConstants.buttonOrder}
+          </Button>
+          <Button
+            className={classes.buttonGrad}
+            classvariant="contained"
+            type="button"
+            onClick={() => setOpenModal(false)}
+          >
+            {modalConstants.buttonStore}
+          </Button>
+        </div>
+      </GeneralModal>
       <img
         src={product.image}
         alt="foto del producto"

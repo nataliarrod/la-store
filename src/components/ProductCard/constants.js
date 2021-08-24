@@ -1,6 +1,6 @@
-const generalModalConstants = {
+const modalConstants = {
   buttonOrder: "ir al carrito",
   buttonStore: "seguir comprando",
 };
 
-export default generalModalConstants;
+export default modalConstants;
