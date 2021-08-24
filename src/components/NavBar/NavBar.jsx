@@ -114,7 +114,7 @@ const NavBar = () => {
           <YouTube fontSize="small" />
         </IconButton>
         <IconButton onClick={redirect} aria-label="icono de carrito de compras">
-          <Badge badgeContent={shoppingCartProducts} color="primary">
+          <Badge badgeContent={shoppingCartProducts} classes={{badge: classes.badge}} color="primary">
             <LocalMallOutlined fontSize="small" />
           </Badge>
         </IconButton>
