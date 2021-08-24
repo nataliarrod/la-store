@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { useSelector } from 'react-redux';
 import { NavHashLink as NavLink } from "react-router-hash-link";
 import Logo from "../../assets/svg/logoMenu.svg";
 import {
@@ -8,13 +9,15 @@ import {
   YouTube,
   LocalMallOutlined,
 } from "@material-ui/icons";
-import { IconButton, Grid } from "@material-ui/core";
+import { IconButton, Grid, Badge } from "@material-ui/core";
 import { labelsNavBar, orderRoute } from "../../utils/constants";
 import useStyles from "./styles";
 
 const NavBar = () => {
   const classes = useStyles();
   const History = useHistory();
+  const products = useSelector(state => state.shoppingCartReducer.products);
+  const shoppingCartProducts = products.length; 
 
   const redirect = () => {
     History.push(orderRoute);
@@ -71,7 +74,9 @@ const NavBar = () => {
           <YouTube fontSize="small" />
         </IconButton>
         <IconButton onClick={redirect} aria-label="icono de carrito de compras">
-          <LocalMallOutlined fontSize="small" />
+          <Badge badgeContent={shoppingCartProducts} color="primary">
+            <LocalMallOutlined fontSize="small" />
+          </Badge>
         </IconButton>
       </Grid>
     </Grid>
