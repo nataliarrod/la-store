@@ -23,7 +23,6 @@ describe('Navigation Bar Component', () => {
       </Router>
     );
 
-    expect(screen.getByAltText('logo linea ancestral')).toBeInTheDocument();
     expect(screen.getByLabelText('icono de instagram')).toBeInTheDocument();
     expect(screen.getByLabelText('icono de facebook')).toBeInTheDocument();
     expect(screen.getByLabelText('icono de youtube')).toBeInTheDocument();
@@ -37,6 +36,19 @@ describe('Navigation Bar Component', () => {
       </Router>
     );
 
-    expect(screen.getAllByRole('button')).toHaveLength(4);
+    expect(screen.getAllByRole('button')).toHaveLength(5);
+  });
+
+  test('render navbar links', () => {
+    render(
+      <Router>
+        <NavBar/>
+      </Router>
+    );
+
+      expect(screen.getByTestId("nav-bar-label-0")).toBeInTheDocument();
+      expect(screen.getByTestId("nav-bar-label-1")).toBeInTheDocument();
+      expect(screen.getByTestId("nav-bar-label-2")).toBeInTheDocument();
+      expect(screen.getByTestId("nav-bar-label-3")).toBeInTheDocument();
   });
 })
