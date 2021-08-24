@@ -6,7 +6,7 @@ const product = {
   _id: '12345',
   name: 'test product',
   price: '25000',
-  maxQuantity: '10',
+  stock: '10',
   url: 'https://img.favpng.com/24/1/14/test-case-logo-software-testing-engineering-use-case-png-favpng-6eTyq7U0v5mmDsfZB8BeG0MgV.jpg',
 };
 
@@ -37,7 +37,7 @@ describe('Product Card Component', () => {
 
     const increaseButton = container.getByLabelText("icono agregar productos");
     const quantityInput = container.getByDisplayValue(0);
-  
+
     fireEvent.click(increaseButton);
     expect(quantityInput.value).toBe("1");
   })

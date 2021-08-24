@@ -15,10 +15,12 @@ const ProductCard = (props) => {
     isListProduct = false,
     takeProduct = () => {},
   } = props;
+  
   const History = useHistory();
+  const classes = useStyles();
+
   const [quantity, setQuantity] = useState(0);
   const [openModal, setOpenModal] = useState(false);
-  const classes = useStyles();
 
   const increaseQuantity = () => {
     const newQuantity = quantity < product.stock ? quantity + 1 : quantity;
