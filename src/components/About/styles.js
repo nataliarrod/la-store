@@ -55,11 +55,11 @@ const useStyles = makeStyles((theme) => ({
     },
     "& > span": {
       display: "flex",
-      fontSize: "16px",
-      fontFamily: "Poppins",
+      fontSize: theme.typography.fontSize,
+      fontFamily: theme.typography.fontFamily,
       textAlign: "right",
       justifyContent: "flex-start",
-      color: "#9C80A6",
+      color: theme.palette.main.purple,
       margin: "1rem",
       paddingLeft: "2rem",
       [theme.breakpoints.up("md")]: {
