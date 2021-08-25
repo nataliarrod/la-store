@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     position: "fixed",
     overflow: "hidden",
     zIndex: "200",
-    backgroundColor: "#FFF",
+    backgroundColor: theme.palette.main.white,
     opacity: "0.96",
   },
   logo: {
@@ -31,8 +31,8 @@ const useStyles = makeStyles((theme) => ({
       margin: "0px 25px",
       textTransform: "uppercase",
       fontFamily: "Poppins",
-      fontSize: "12px",
-      color: "grey",
+      fontSize: theme.typography.link.fontSize,
+      color: theme.palette.main.gray,
       textDecoration: "none",
     },
   },
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
   },
   social: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "flex-end",
     [theme.breakpoints.up("sm")]: {
       justifyContent: "flex-end",
     },
