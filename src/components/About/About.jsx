@@ -14,7 +14,7 @@ const About = () => {
     <Parallax bgImage={backgroundAbout} strength={500}>
       <Grid id="about" className={classes.root} container>
         <Grid className={classes.textAboutContainer} item xs={12} sm={6}>
-          <h2>{aboutConstants.title}</h2>
+          <h3>{aboutConstants.title}</h3>
           <span className={classes.autoType}><AutoType complement={typeWriterConstants.complement} words={typeWriterConstants.professions} /></span>
           <p data-testid="about-text"> {aboutConstants.content} </p>
         </Grid>
