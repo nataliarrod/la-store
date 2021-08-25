@@ -1,10 +1,10 @@
 import React from "react";
-import { Modal, Backdrop, Fade, Button } from "@material-ui/core";
+import { Modal, Backdrop, Fade } from "@material-ui/core";
 import useStyles from "./styles";
 
-const GeneralModal = ({ openModal, setOpenModal, title, message }) => {
+const GeneralModal = ({ openModal, setOpenModal, title, message, children }) => {
   const classes = useStyles();
-
+  
   return (
     <div className={classes.root}>
       <Modal
@@ -23,14 +23,7 @@ const GeneralModal = ({ openModal, setOpenModal, title, message }) => {
           <div className={classes.paper}>
             <h2>{title}</h2>
             <p>{message}</p>
-            <Button
-              className={classes.buttonGrad}
-              classvariant="contained"
-              type="button"
-              onClick={() => setOpenModal(false)}
-            >
-              cerrar
-            </Button>
+            {children}
           </div>
         </Fade>
       </Modal>
