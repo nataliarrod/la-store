@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core';
 
 const backGround = '#f6f9fc';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
@@ -10,7 +10,10 @@ const useStyles = makeStyles(() => ({
     alignItems: 'center',
     backgroundColor: backGround,
     height: '450px',
-    fontFamily: 'Poppins'
+    fontFamily: 'Poppins',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
   },
   textContainer: {
     display: 'flex',

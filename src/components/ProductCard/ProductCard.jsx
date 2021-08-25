@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { TextField, Button, InputAdornment, IconButton } from "@material-ui/core";
-import AddIcon from '@material-ui/icons/Add';
-import RemoveIcon from '@material-ui/icons/Remove';
+import AddIcon from "@material-ui/icons/Add";
+import RemoveIcon from "@material-ui/icons/Remove";
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import useStyles from "./styles";
 import GeneralModal from "../GeneralModal";
+import  { useHistory } from "react-router-dom";
+import { orderRoute } from "../../utils/constants";
+import productCardConstants, { modalConstants } from "./constants";
 
 const ProductCard = (props) => {
   const {
@@ -12,13 +15,21 @@ const ProductCard = (props) => {
     isListProduct = false,
     takeProduct = () => {},
   } = props;
+  
+  const History = useHistory();
+  const classes = useStyles();
+
   const [quantity, setQuantity] = useState(0);
   const [openModal, setOpenModal] = useState(false);
-  const classes = useStyles();
 
   const increaseQuantity = () => {
     const newQuantity = quantity < product.stock ? quantity + 1 : quantity;
     setQuantity(newQuantity);
+  };
+
+  
+  const redirectToOrder = () => {
+    History.push(orderRoute);
   };
 
   const decreaseQuantity = () => {
@@ -38,9 +49,28 @@ const ProductCard = (props) => {
       <GeneralModal
         openModal={openModal}
         setOpenModal={setOpenModal}
-        title={'Producto agregado'}
+        title={"Producto agregado"}
         message={`Agregaste ${product.name} al carrito`}
-      />
+      >
+        <div className={classes.buttonsModal}>
+          <Button
+            className={classes.buttonGrad}
+            classvariant="contained"
+            type="button"
+            onClick={redirectToOrder}
+          >
+            {modalConstants.buttonOrder}
+          </Button>
+          <Button
+            className={classes.buttonGrad}
+            classvariant="contained"
+            type="button"
+            onClick={() => setOpenModal(false)}
+          >
+            {modalConstants.buttonStore}
+          </Button>
+        </div>
+      </GeneralModal>
       <img
         src={product.image}
         alt="foto del producto"
@@ -88,7 +118,7 @@ const ProductCard = (props) => {
             disabled={!product.stock}
             onClick={takeProductToCart}
           >
-            agregar al carrito
+            {productCardConstants.buttonAddTocard}
           </Button>
         </>
       ) : null}

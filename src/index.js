@@ -5,11 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
+import { ThemeProvider } from '@material-ui/core';
+import { LineaAncestralTheme } from './themes/themes';
 
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
+      <ThemeProvider theme={LineaAncestralTheme}>
       <App />
+      </ThemeProvider>
     </React.StrictMode>
   </Provider>,
   document.getElementById('root')

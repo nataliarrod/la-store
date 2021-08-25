@@ -2,13 +2,16 @@ import { makeStyles } from '@material-ui/core';
 
 const backGround = '#f6f9fc';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
     backgroundColor: backGround,
     height: '450px',
     justifyContent: 'center',
+    [theme.breakpoints.down('lg')]: {
+      display: 'none',
+    }
   },
   textContainer: {
     display: 'flex',
