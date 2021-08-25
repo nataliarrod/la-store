@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TextField, Button, InputAdornment, IconButton } from "@material-ui/core";
-import AddIcon from '@material-ui/icons/Add';
-import RemoveIcon from '@material-ui/icons/Remove';
+import AddIcon from "@material-ui/icons/Add";
+import RemoveIcon from "@material-ui/icons/Remove";
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import useStyles from "./styles";
 import GeneralModal from "../GeneralModal";
@@ -49,7 +49,7 @@ const ProductCard = (props) => {
       <GeneralModal
         openModal={openModal}
         setOpenModal={setOpenModal}
-        title={'Producto agregado'}
+        title={"Producto agregado"}
         message={`Agregaste ${product.name} al carrito`}
       >
         <div className={classes.buttonsModal}>
