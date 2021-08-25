@@ -62,6 +62,7 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.main.purple,
       margin: "1rem",
       paddingLeft: "2rem",
+      fontWeight: "bold",
       [theme.breakpoints.up("md")]: {
         position: "relative",
         textAlign: "right",
