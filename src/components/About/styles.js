@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
       },
       [theme.breakpoints.up("lg")]: {
         marginRight: "3rem",
-        fontSize: "19px",
+        fontSize: theme.typography.h5.fontSize,
       },
     },
     "& > span": {
@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "flex-end",
       },
       [theme.breakpoints.up("lg")]: {
-        fontSize: "22px",
+        fontSize: theme.typography.h5.fontSize,
         marginRight: "3rem",
       },
     },
