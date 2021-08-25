@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   modal: {
     display: "flex",
     alignItems: "center",
@@ -12,21 +12,21 @@ const useStyles = makeStyles(() => ({
     alignItems: "center",
     justifyContent: "center",
     border: "2px solid #d91c84",
-    background: "#f6f9fc",
+    background: theme.palette.main.blue,
     width: "400px",
     height: "300px",
     "&  > h2": {
-      fontFamily: "Dancing Script",
-      color: "#d91c84",
-      fontSize: "40px",
+      fontFamily: theme.typography.fontFamilySecondary,
+      color: theme.palette.main.pink,
+      fontSize: theme.typography.h1.fontSize,
       textTransform: "capitalize",
       textAlign: "center",
       margin: "0.5rem",
     },
     "&  > p": {
-      fontFamily: "Poppins",
-      color: "gray",
-      fontSize: "16px",
+      fontFamily: theme.typography.fontFamily,
+      color: theme.palette.main.gray,
+      fontSize: theme.typography.fontSize,
       textTransform: "lowercase",
       textAlign: "center",
       margin: "1rem",
@@ -35,7 +35,6 @@ const useStyles = makeStyles(() => ({
       textTransform: "capitalize",
     },
   },
-  
 }));
 
 export default useStyles;

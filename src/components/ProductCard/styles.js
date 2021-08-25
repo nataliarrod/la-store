@@ -1,14 +1,14 @@
 import { makeStyles } from '@material-ui/core';
 
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   productCard: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     textTransform: "capitalize",
-    fontSize: "13px",
+    fontSize: theme.typography.body1.fontSize,
     padding: "30px",
     "& > h4": {
       margin: "10px 0px 5px ",
@@ -40,7 +40,7 @@ const useStyles = makeStyles(() => ({
   },
   button: {
     marginTop: "15px",
-    backgroundColor: "#d91c84",
+    backgroundColor: theme.palette.main.pink,
   },
   buttonsModal: {
     display: "flex",
@@ -49,15 +49,15 @@ const useStyles = makeStyles(() => ({
   },
   buttonGrad: {
     width: "14rem",
-    background: "#d91c84",
-    color: "white",
+    background: theme.palette.main.pink,
+    color: theme.palette.main.white,
     height: "2.2rem",
     padding: "0 30px",
     textTransform: "uppercase",
     margin: "0.5rem",
-    fontFamily: "Poppins",
+    fontFamily: theme.typography.fontFamily,
     "&:hover": {
-      backgroundColor: "#b63281",
+      backgroundColor: theme.palette.main.pink,
     },
   },
 }));
