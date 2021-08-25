@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, Backdrop, Fade, Button } from "@material-ui/core";
+import { Modal, Backdrop, Fade } from "@material-ui/core";
 import useStyles from "./styles";
 
 const GeneralModal = ({ openModal, setOpenModal, title, message, children }) => {
