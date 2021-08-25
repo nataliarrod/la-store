@@ -7,7 +7,7 @@ import useStyles from "./styles";
 import GeneralModal from "../GeneralModal";
 import  { useHistory } from "react-router-dom";
 import { orderRoute } from "../../utils/constants";
-import modalConstants from "./constants";
+import productCardConstants, { modalConstants } from "./constants";
 
 const ProductCard = (props) => {
   const {
@@ -118,7 +118,7 @@ const ProductCard = (props) => {
             disabled={!product.stock}
             onClick={takeProductToCart}
           >
-            agregar al carrito
+            {productCardConstants.buttonAddTocard}
           </Button>
         </>
       ) : null}
