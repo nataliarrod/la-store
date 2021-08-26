@@ -8,10 +8,10 @@ const useStyles = makeStyles(() => ({
     marginTop: "60px",
   },
   carouselComponent: {
-    width: '1500px',
+    width: '100%',
   },
   imagesCarouselContainer: {
-    height: '450px',
+    height: '100%',
     '& > img': {
       width: '100%',
       objectFit: 'fill'
