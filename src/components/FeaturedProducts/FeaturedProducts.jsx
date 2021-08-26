@@ -2,7 +2,7 @@ import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import ProductCard from "../../components/ProductCard";
 import { shopRoute } from "../../utils/constants";
-import { featuredProductsMockup } from "../../utils/constants";
+import featuredProductsMockup from "../../utils/constants";
 import useStyles from "./styles";
 
 const FeaturedProducts = () => {
