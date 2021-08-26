@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     height: '450px',
     fontFamily: 'Poppins',
     [theme.breakpoints.down('sm')]: {
-      display: 'none',
+      display: '450px',
     },
   },
   textContainer: {
