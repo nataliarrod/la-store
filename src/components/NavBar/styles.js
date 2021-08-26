@@ -55,8 +55,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   badge: {
-    color: "#FFF",
-    backgroundColor: "#d91c84",
+    color: theme.palette.main.white,
+    backgroundColor: theme.palette.main.pink,
   },
 }));
 
