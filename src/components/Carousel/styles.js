@@ -4,7 +4,7 @@ const useStyles = makeStyles(() => ({
   mainCarouselContainer: {
     display: "flex",
     justifyContent: "center",
-    backgrounColor: "#f6f9fc",
+    backgrounColor: theme.palette.main.blue,
     marginTop: "60px",
   },
   carouselComponent: {
