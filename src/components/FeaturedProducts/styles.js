@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     height: '450px',
     justifyContent: 'center',
     [theme.breakpoints.down('lg')]: {
-      display: 'none',
+      display: 'flex',
     }
   },
   textContainer: {
