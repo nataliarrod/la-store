@@ -4,18 +4,21 @@ import ProductCard from "../../components/ProductCard";
 import { shopRoute } from "../../utils/constants";
 import featuredProductsMockup from "../../utils/constants";
 import useStyles from "./styles";
+import { featuredProductsConstants } from "./constants";
 
 const FeaturedProducts = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <div className={classes.textContainer}>
-        <h3>productos destacados</h3>
+        <h3>
+          {featuredProductsConstants.tittle}
+        </h3>
         <Link
           to={shopRoute}
           aria-describedby="ver todos los productos"
         >
-          ver todos
+          {featuredProductsConstants.link}
         </Link>
       </div>
       <div className={classes.productsContainer}>
