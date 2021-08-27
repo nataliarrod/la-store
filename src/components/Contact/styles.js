@@ -30,7 +30,13 @@ const useStyles = makeStyles((theme) => ({
       margin: "5px 0px 15px 0px",
       fontSize: theme.typography.body1.fontSize,
       [theme.breakpoints.up("md")]: {
+        fontSize: theme.typography.fontSize,
+      },
+      [theme.breakpoints.up("lg")]: {
         fontSize: theme.typography.h6.fontSize,
+      },
+      [theme.breakpoints.up("xl")]: {
+        fontSize: theme.typography.h5.fontSize,
       },
     },
   },
@@ -51,7 +57,13 @@ const useStyles = makeStyles((theme) => ({
       [theme.breakpoints.up("md")]: {
         width: "500px",
         height: "40px",
+        fontSize: theme.typography.fontSize,
+      },
+      [theme.breakpoints.up("ls")]: {
         fontSize: theme.typography.h6.fontSize,
+      },
+      [theme.breakpoints.up("xl")]: {
+        fontSize: theme.typography.h5.fontSize,
       },
     },
   },
