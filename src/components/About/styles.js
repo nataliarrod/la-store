@@ -45,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: "500",
       margin: "0",
       [theme.breakpoints.up("md")]: {
+        fontSize: theme.typography.h6.fontSize,
         position: "relative",
         textAlign: "right",
       },
