@@ -8,7 +8,7 @@ const LandingContainer = () => {
   return (
     <div data-testid="landing-container">
       <Carousel />
-      <FeaturedProducts />
+      {/* <FeaturedProducts /> */}
       <About />
       <Contact />
     </div>

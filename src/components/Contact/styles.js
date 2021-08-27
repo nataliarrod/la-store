@@ -1,18 +1,17 @@
 import { makeStyles } from "@material-ui/core";
 
-const backGround = "#f6f9fc";
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: backGround,
-    height: "450px",
-    fontFamily: "Poppins",
+    backgroundColor: theme.palette.main.blue,
+    height: "100%",
+    fontFamily: theme.typography.fontFamily,
+    marginTop: "1rem",
     [theme.breakpoints.down("sm")]: {
-      display: "450px",
+      display: "flex",
     },
   },
   textContainer: {
@@ -22,13 +21,17 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     "& > h2": {
       textTransform: "capitalize",
-      fontFamily: "Dancing Script",
-      fontSize: "50px",
-      color: "#d91c84",
+      fontFamily: theme.typography.fontFamilySecondary,
+      fontSize: theme.typography.h3.fontSize,
+      color: theme.palette.main.pink,
       margin: "15px 0px 5px 0px",
+      [theme.breakpoints.down("sm")]: {
+        display: "flex",
+      },
     },
     "& > p": {
-      margin: "5px 0px 15px 0px"
+      margin: "5px 0px 15px 0px",
+      fontSize: theme.typography.body1.fontSize,
     },
   },
   formContainer: {
@@ -37,23 +40,23 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "capitalize",
     alignItems: "center",
     width: "auto",
+    fontSize: theme.typography.body1.fontSize,
     "& .MuiInputBase-root": {
-      width: "500px",
-      height: "60px",
+      width: "300px",
+      height: "30px",
     },
   },
   buttonGrad: {
-    background: "#d91c84",
-    borderRadius: "50px",
-    color: "white",
-    height: 48,
-    padding: "0 30px",
+    background: theme.palette.main.pink,
+    color: theme.palette.main.white,
+    height: 30,
+    padding: "0 15px",
     textTransform: "uppercase",
     margin: "30px 0px",
-    fontFamily: "Poppins",
-    "&:hover":{
-      backgroundColor: "#b63281",
-    }
+    fontFamily: theme.typography.fontFamily,
+    "&:hover": {
+      backgroundColor: theme.palette.main.pink,
+    },
   },
 }));
 
