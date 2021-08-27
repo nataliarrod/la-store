@@ -33,13 +33,13 @@ const useStyles = makeStyles((theme) => ({
       },
       [theme.breakpoints.up("lg")]: {
         marginRight: "5rem",
-        fontSize: "60px",
+        fontSize: theme.typography.h1.fontSize,
       },
     },
     "& > p": {
       fontFamily: theme.typography.fontFamily,
       textAlign: "left",
-      fontSize: theme.typography.h6.fontSize,
+      fontSize: theme.typography.body1.fontSize,
       color: theme.palette.main.gray,
       paddingLeft: "3rem",
       fontWeight: "500",
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     "& > span": {
       display: "flex",
       fontSize: theme.typography.fontSize,
-      fontFamily: theme.typography.fontFamily,
+      fontFamily: theme.typography.h6.fontFamily,
       textAlign: "right",
       justifyContent: "flex-start",
       color: theme.palette.main.purple,
@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "flex-end",
       },
       [theme.breakpoints.up("lg")]: {
-        fontSize: theme.typography.h5.fontSize,
+        fontSize: theme.typography.h4.fontSize,
         marginRight: "3rem",
       },
     },
