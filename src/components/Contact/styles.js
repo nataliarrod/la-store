@@ -22,13 +22,16 @@ const useStyles = makeStyles((theme) => ({
       fontSize: theme.typography.h3.fontSize,
       color: theme.palette.main.pink,
       margin: "15px 0px 5px 0px",
-      [theme.breakpoints.down("sm")]: {
-        display: "flex",
+      [theme.breakpoints.up("lg")]: {
+        fontSize: theme.typography.h1.fontSize,
       },
     },
     "& > p": {
       margin: "5px 0px 15px 0px",
       fontSize: theme.typography.body1.fontSize,
+      [theme.breakpoints.up("md")]: {
+        fontSize: theme.typography.h6.fontSize,
+      },
     },
   },
   formContainer: {
@@ -41,6 +44,20 @@ const useStyles = makeStyles((theme) => ({
     "& .MuiInputBase-root": {
       width: "300px",
       height: "30px",
+      [theme.breakpoints.up("sm")]: {
+        width: "400px",
+        height: "35px",
+      },
+      [theme.breakpoints.up("md")]: {
+        width: "500px",
+        height: "40px",
+        fontSize: theme.typography.h6.fontSize,
+      },
+      [theme.breakpoints.up("lg")]: {
+        width: "500px",
+        height: "50px",
+        fontSize: theme.typography.h5.fontSize,
+      },
     },
   },
   buttonGrad: {
