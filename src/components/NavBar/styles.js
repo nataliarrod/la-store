@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: `1px solid ${borderColor}`,
     boxShadow: `0 0 5px 0 ${borderColor}`,
     width: "100%",
-    top:"0",
+    top: "0",
     position: "fixed",
     overflow: "hidden",
     zIndex: "200",
@@ -53,6 +53,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("sm")]: {
       justifyContent: "flex-end",
     },
+  },
+  badge: {
+    color: theme.palette.main.white,
+    backgroundColor: theme.palette.main.pink,
   },
 }));
 

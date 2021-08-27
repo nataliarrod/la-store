@@ -10,9 +10,6 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     fontFamily: theme.typography.fontFamily,
     marginTop: "1rem",
-    [theme.breakpoints.down("sm")]: {
-      display: "flex",
-    },
   },
   textContainer: {
     display: "flex",

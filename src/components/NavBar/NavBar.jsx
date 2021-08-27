@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { useSelector } from 'react-redux';
 import { NavHashLink as NavLink } from "react-router-hash-link";
 import {
   Instagram,
@@ -7,14 +8,9 @@ import {
   YouTube,
   LocalMallOutlined,
 } from "@material-ui/icons";
-import { 
-  IconButton,
-  Grid,
-  MenuItem,
-  Menu,
-} from "@material-ui/core";
-import MenuIcon from '@material-ui/icons/Menu';
+import { IconButton, Grid, Badge, Menu, MenuItem } from "@material-ui/core";
 import { orderRoute, URL_SOCIAL } from "../../utils/constants";
+import MenuIcon from '@material-ui/icons/Menu';
 import Logo from "../../assets/svg/logoMenu.svg";
 import labelsNavBar from "./constants";
 import useStyles from "./styles";
@@ -22,6 +18,8 @@ import useStyles from "./styles";
 const NavBar = () => {
   const classes = useStyles();
   const History = useHistory();
+  const products = useSelector(state => state.shoppingCartReducer.products);
+  const shoppingCartProducts = products.length; 
   const [menuOpen, setMenuOpen] = React.useState(null);
   
   const { instagram, facebook, youtube } = URL_SOCIAL;
@@ -116,7 +114,9 @@ const NavBar = () => {
           <YouTube fontSize="small" />
         </IconButton>
         <IconButton onClick={redirect} aria-label="icono de carrito de compras">
-          <LocalMallOutlined fontSize="small" />
+          <Badge badgeContent={shoppingCartProducts} classes={{badge: classes.badge}} color="primary">
+            <LocalMallOutlined fontSize="small" />
+          </Badge>
         </IconButton>
       </Grid>
     </Grid>

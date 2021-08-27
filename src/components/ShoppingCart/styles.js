@@ -1,31 +1,32 @@
 import { makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
-    height: '622px',
-    '& h2': {
-      fontFamily: 'Dancing Script',
-      color: '#d91c84',
-      fontSize: '40px',
-      textTransform: 'capitalize',
+    width: "100%",
+    height: "622px",
+    marginTop: "70px",
+    "& h2": {
+      fontFamily: theme.typography.fontFamilySecondary,
+      color: theme.palette.main.pink,
+      fontSize: theme.typography.h1.fontSize,
+      textTransform: "capitalize",
     },
   },
   buttonContainer: {
-    marginTop: '30px',
-    '& .MuiButtonBase-root': {
-      backgroundColor: '#d91c84',
-      color: 'white',
-      marginRight: '20px',
+    marginTop: "30px",
+    "& .MuiButtonBase-root": {
+      backgroundColor: theme.palette.main.pink,
+      color: theme.palette.main.white,
+      marginRight: "20px",
     },
   },
   totalCount: {
-    fontFamily: 'Dancing Script',
-    color: '#d91c84',
-    textTransform: 'uppercase',
-    fontSize: '20px',
-    marginRight: '40px'
-  }
+    fontFamily: theme.typography.fontFamilySecondary,
+    color: theme.palette.main.pink,
+    textTransform: "uppercase",
+    fontSize: theme.typography.h5.fontSize,
+    marginRight: "40px",
+  },
 }));
 
 export default useStyles;
