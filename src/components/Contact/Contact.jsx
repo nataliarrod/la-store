@@ -3,6 +3,7 @@ import { TextField, Button } from "@material-ui/core";
 import GeneralModal from "../../components/GeneralModal";
 import { contactModal } from "../../utils/constants";
 import useStyles from "./styles";
+import { textContainerConstants, textFieldConstants, buttonConstants } from "./constants"
 
 const Contact = () => {
   const classes = useStyles();
@@ -23,8 +24,8 @@ const Contact = () => {
         title={contactModal.title}
       />
       <div className={classes.textContainer}>
-        <h2>contáctame</h2>
-        <p>lineaancestral@hotmail.com</p>
+        <h2>{textContainerConstants.tittle}</h2>
+        <p>{textContainerConstants.email}</p>
       </div>
           
       <form
@@ -35,43 +36,43 @@ const Contact = () => {
         <TextField
           type="text"
           name="contactName"
-          placeholder="Nombre *"
+          placeholder={textFieldConstants.name}
           aria-label="name"
-          aria-describedby="escribir nombre completo"
+          aria-describedby={textFieldConstants.describedByName}
           required
         />
         <TextField
           type="email"
           name="contactEmail"
-          placeholder="Email *"
+          placeholder={textFieldConstants.email}
           aria-label="email"
-          aria-describedby="escribir email"
+          aria-describedby={textFieldConstants.describedByEmail}
           required
         />
         <TextField
           type="text"
           name="contactSubject"
-          placeholder="Asunto *"
+          placeholder={textFieldConstants.subject}
           aria-label="subject"
-          aria-describedby="escribir asunto"
+          aria-describedby={textFieldConstants.describedBySubject}
           required
         />
         <TextField
           type="text"
           name="contactMessage"
-          placeholder="Mensaje *"
+          placeholder={textFieldConstants.message}
           aria-label="message"
-          aria-describedby="escribir mensaje"
+          aria-describedby={textFieldConstants.describedByMessage}
           required
         />
         <Button
           type="submit"
           aria-label="submit"
-          aria-describedby="enviar informacion"
+          aria-describedby={buttonConstants.describeBySubmit}
           className={classes.buttonGrad}
           classvariant="contained"
         >
-          enviar
+          {buttonConstants.textButton}
         </Button>
       </form>
     </div>
