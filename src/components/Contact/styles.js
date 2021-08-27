@@ -53,11 +53,6 @@ const useStyles = makeStyles((theme) => ({
         height: "40px",
         fontSize: theme.typography.h6.fontSize,
       },
-      [theme.breakpoints.up("lg")]: {
-        width: "500px",
-        height: "50px",
-        fontSize: theme.typography.h5.fontSize,
-      },
     },
   },
   buttonGrad: {
