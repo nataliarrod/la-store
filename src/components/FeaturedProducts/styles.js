@@ -5,8 +5,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    backgroundColor: theme.palette.blue,
-    height: "450px",
+    backgroundColor: theme.palette.main.blue,
+    height: "100%",
     justifyContent: "center",
     [theme.breakpoints.down("lg")]: {
       display: "100%",
@@ -15,25 +15,33 @@ const useStyles = makeStyles((theme) => ({
   textContainer: {
     display: "flex",
     justifyContent: "space-between",
+  },
+  tittle: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     "& > h3": {
-      margin: "20px 0px 40px 20px",
       fontFamily: theme.typography.fontFamilySecondary,
-      color: theme.palette.pink,
-      fontSize: theme.typography.h1.fontSize,
+      color: theme.palette.main.pink,
+      fontSize: theme.typography.h3.fontSize,
       textTransform: "capitalize",
     },
+  },
+  goToProductCard: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     "& > a": {
-      margin: "20px 20px 0px 0px",
-      fontFamily: theme.typography.fontFamily,
-      color: theme.palette.gray,
+      fontFamily: theme.typography.body2.fontSize,
+      color: theme.palette.main.gray,
       textTransform: "capitalize",
     },
   },
   productsContainer: {
     display: "flex",
     width: "100%",
-    fontFamily: theme.typography.fontFamily,
-    color: theme.palette.gray,
+    fontFamily: theme.typography.body1.fontSize,
+    color: theme.palette.main.gray,
     justifyContent: "center",
   },
 }));
