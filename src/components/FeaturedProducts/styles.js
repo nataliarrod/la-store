@@ -18,13 +18,20 @@ const useStyles = makeStyles((theme) => ({
   },
   tittle: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     alignItems: "center",
+    paddingLeft: "2rem",
     "& > h3": {
       fontFamily: theme.typography.fontFamilySecondary,
       color: theme.palette.main.pink,
       fontSize: theme.typography.h3.fontSize,
       textTransform: "capitalize",
+      [theme.breakpoints.up("md")]: {
+        paddingLeft: "3rem",
+      },
+      [theme.breakpoints.up("lg")]: {
+        fontSize: theme.typography.h1.fontSize,
+      },
     },
   },
   goToProductCard: {
@@ -32,9 +39,16 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     "& > a": {
-      fontFamily: theme.typography.body2.fontSize,
+      fontFamily: theme.typography.fontFamily,
+      fontSize: theme.typography.body1.fontSize,
       color: theme.palette.main.gray,
       textTransform: "capitalize",
+      [theme.breakpoints.up("lg")]: {
+        fontSize: theme.typography.h6.fontSize,
+      },
+      [theme.breakpoints.up("xl")]: {
+        fontSize: theme.typography.h5.fontSize,
+      },
     },
   },
   productsContainer: {
