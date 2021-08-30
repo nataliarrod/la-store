@@ -44,6 +44,11 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.main.gray,
     justifyContent: "center",
   },
+  productCard: {
+    "& > img": {
+      height: "50px",
+    },
+  },
 }));
 
 export default useStyles;
