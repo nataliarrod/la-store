@@ -45,9 +45,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   productCard: {
-    "& > img": {
-      height: "50px",
-    },
+      height: "100%",
   },
 }));
 

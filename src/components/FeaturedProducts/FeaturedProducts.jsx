@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { Grid, Paper } from "@material-ui/core";
 import { HashLink as Link } from "react-router-hash-link";
 import ProductCard from "../../components/ProductCard";
 import { shopRoute } from "../../utils/constants";
@@ -27,7 +27,11 @@ const FeaturedProducts = () => {
       </Grid>
       <Grid className={classes.productsContainer} container xs={12}>
         {featuredProductsMockup.map((product, index) => {
-          return <ProductCard product={product} key={`feature-product-${index}`}/>;
+          return (
+            <Paper className={classes.productCard}>
+              <ProductCard product={product} key={`feature-product-${index}`}/>
+            </Paper>
+          )
         })}
       </Grid>
     </Grid>

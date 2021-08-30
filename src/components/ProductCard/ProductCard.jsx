@@ -49,8 +49,8 @@ const ProductCard = (props) => {
       <img
         src={product.image}
         alt="foto del producto"
-        width="150px"
-        height="150px"
+        width="100px"
+        height="100px"
       />
       <h4>{product.name}</h4>
       <span>{`$ ${product.price}`}</span>
