@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.main.blue,
     height: "100%",
     justifyContent: "center",
+    marginBottom: "2rem",
     [theme.breakpoints.down("lg")]: {
       display: "100%",
     },
