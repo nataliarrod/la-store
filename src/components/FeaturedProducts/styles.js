@@ -45,7 +45,17 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   productCard: {
-      height: "100%",
+    display: "flex",
+    justifyContent: "center",
+    textAlign: "center",
+    alignItems: "center",
+    height: "200px",
+    width: "150px",
+    margin: "0.5rem",
+    [theme.breakpoints.up("md")]: {
+      height: "250px",
+      width: "150px",
+    },
   },
 }));
 

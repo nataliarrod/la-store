@@ -10,12 +10,19 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "capitalize",
     fontSize: theme.typography.body1.fontSize,
     padding: "30px",
+    [theme.breakpoints.up("lg")]: {
+      fontSize: theme.typography.fontSize,
+    },
     "& > h4": {
       margin: "10px 0px 5px ",
     },
     "& > img": {
       maxWidth: "120px",
       objectFit: "cover",
+      [theme.breakpoints.up("md")]: {
+        width: "150px",
+        height: "150px",
+      },
     },
     "& > input": {
       width: "100%",
