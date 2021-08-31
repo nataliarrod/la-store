@@ -44,12 +44,16 @@ const useStyles = makeStyles((theme) => ({
       paddingLeft: "3rem",
       fontWeight: "500",
       margin: "0",
+      position: "relative",
       [theme.breakpoints.up("md")]: {
-        position: "relative",
+        fontSize: theme.typography.fontSize,
         textAlign: "right",
       },
       [theme.breakpoints.up("lg")]: {
         marginRight: "3rem",
+        fontSize: theme.typography.h6.fontSize,
+      },
+      [theme.breakpoints.up("xl")]: {
         fontSize: theme.typography.h5.fontSize,
       },
     },
@@ -63,14 +67,17 @@ const useStyles = makeStyles((theme) => ({
       margin: "1rem",
       paddingLeft: "2rem",
       fontWeight: "bold",
+      position: "relative",
       [theme.breakpoints.up("md")]: {
-        position: "relative",
         textAlign: "right",
         justifyContent: "flex-end",
       },
       [theme.breakpoints.up("lg")]: {
-        fontSize: theme.typography.h4.fontSize,
+        fontSize: theme.typography.h5.fontSize,
         marginRight: "3rem",
+      },
+      [theme.breakpoints.up("xl")]: {
+        fontSize: theme.typography.h4.fontSize,
       },
     },
   },
