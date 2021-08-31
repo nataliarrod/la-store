@@ -48,36 +48,11 @@ const ProductCard = (props) => {
 
   return (
     <div className={classes.productCard} key={`product-card-${product._id}`}>
-      <GeneralModal
-        openModal={openModal}
-        setOpenModal={setOpenModal}
-        title={"Producto agregado"}
-        message={`Agregaste ${product.name} al carrito`}
-      >
-        <div className={classes.buttonsModal}>
-          <Button
-            className={classes.buttonGrad}
-            classvariant="contained"
-            type="button"
-            onClick={redirectToOrder}
-          >
-            {modalConstants.buttonOrder}
-          </Button>
-          <Button
-            className={classes.buttonGrad}
-            classvariant="contained"
-            type="button"
-            onClick={() => setOpenModal(false)}
-          >
-            {modalConstants.buttonStore}
-          </Button>
-        </div>
-      </GeneralModal>
       <img
         src={product.image}
         alt="foto del producto"
-        width="150px"
-        height="150px"
+        width="100px"
+        height="100px"
       />
       <h4>{product.name}</h4>
       <span>{moneyFormatter(product.price)}</span>
@@ -122,6 +97,31 @@ const ProductCard = (props) => {
           >
             {productCardConstants.buttonAddTocard}
           </Button>
+          <GeneralModal
+            openModal={openModal}
+            setOpenModal={setOpenModal}
+            title={"Producto agregado"}
+            message={`Agregaste ${product.name} al carrito`}
+          >
+            <div className={classes.buttonsModal}>
+              <Button
+                className={classes.buttonGrad}
+                classvariant="contained"
+                type="button"
+                onClick={redirectToOrder}
+              >
+                {modalConstants.buttonOrder}
+              </Button>
+              <Button
+                className={classes.buttonGrad}
+                classvariant="contained"
+                type="button"
+                onClick={() => setOpenModal(false)}
+              >
+                {modalConstants.buttonStore}
+              </Button>
+            </div>
+          </GeneralModal>
         </>
       ) : null}
     </div>

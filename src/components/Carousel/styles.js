@@ -1,20 +1,20 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from "@material-ui/core";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   mainCarouselContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    backgrounColor: '#f6f9fc',
+    display: "flex",
+    justifyContent: "center",
+    backgrounColor: theme.palette.main.blue,
     marginTop: "60px",
   },
   carouselComponent: {
-    width: '1500px',
+    width: "100%",
   },
   imagesCarouselContainer: {
-    height: '450px',
-    '& > img': {
-      width: '100%',
-      objectFit: 'fill'
+    height: "100%",
+    "& > img": {
+      width: "100%",
+      objectFit: "fill",
     },
   },
 }));
