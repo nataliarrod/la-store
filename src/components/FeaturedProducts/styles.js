@@ -9,9 +9,6 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     justifyContent: "center",
     marginBottom: "2rem",
-    [theme.breakpoints.down("lg")]: {
-      display: "100%",
-    },
   },
   textContainer: {
     display: "flex",
