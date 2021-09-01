@@ -11,3 +11,11 @@ export const calculateTotal = (subtotal, taxes) => {
   }, 0);
   return total;
 };
+
+export const moneyFormatter = (number) => {
+  return new Intl.NumberFormat("es-CO", {
+    style: "currency",
+    currency: "COP",
+    minimumFractionDigits: 0,
+  }).format(number);
+};

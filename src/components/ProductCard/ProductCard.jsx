@@ -7,7 +7,9 @@ import useStyles from "./styles";
 import GeneralModal from "../GeneralModal";
 import  { useHistory } from "react-router-dom";
 import { orderRoute } from "../../utils/constants";
+import { moneyFormatter } from "../../utils/helpers/helpers";
 import productCardConstants, { modalConstants } from "./constants";
+
 
 const ProductCard = (props) => {
   const {
@@ -53,7 +55,7 @@ const ProductCard = (props) => {
         height="100px"
       />
       <h4>{product.name}</h4>
-      <span>{`$ ${product.price}`}</span>
+      <span>{moneyFormatter(product.price)}</span>
       {isListProduct ? (
         <>
           <TextField
