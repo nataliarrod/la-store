@@ -1,6 +1,6 @@
 import React from "react";
 import  { useHistory } from "react-router-dom";
-import { Button } from "@material-ui/core";
+import { Button, Grid } from "@material-ui/core";
 import { shopRoute } from "../../utils/constants";
 import useStyles from "./styles";
 
@@ -14,7 +14,7 @@ const EmptyCart = (props) => {
 
   return (
     <div className={classes.root}>
-      <h3>tu carrito esta vacio</h3>
+      <h3>tu carrito está vacio</h3>
       <Button onClick={redirect} size="small" variant="contained">
           volver a la tienda
       </Button>
