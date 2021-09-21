@@ -3,6 +3,7 @@ import  { useHistory } from "react-router-dom";
 import { Button, Grid } from "@material-ui/core";
 import { shopRoute } from "../../utils/constants";
 import useStyles from "./styles";
+import { typeWriterConstants } from "./constants"
 
 const EmptyCart = (props) => {
   const classes = useStyles();
@@ -14,9 +15,9 @@ const EmptyCart = (props) => {
 
   return (
     <div className={classes.root}>
-      <h3>tu carrito está vacio</h3>
+      <h3>{typeWriterConstants.title}</h3>
       <Button onClick={redirect} size="small" variant="contained">
-          volver a la tienda
+          {typeWriterConstants.button}
       </Button>
     </div>
   );
