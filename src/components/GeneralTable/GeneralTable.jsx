@@ -18,6 +18,10 @@ const GeneralTable = ({ list, deleteItem }) => {
 
   const calculateSubtotal = (quantity, price) => quantity * price;
 
+  const nameFormatter = (str) => {
+    return str.toLowerCase();
+  };
+
   return (
       <TableContainer component={Paper} className={classes.root}>
         <Table
@@ -36,17 +40,18 @@ const GeneralTable = ({ list, deleteItem }) => {
             </TableRow>
           </TableHead>
           <TableBody>
+            {console.log(list)}
             {list.map((row) => (
               <TableRow key={row._id}>
                 <TableCell align="center" component="th" scope="row">
                   <img
-                    src={row.url}
+                    src={row.image}
                     alt="foto del producto"
-                    width="10px"
-                    height="10px"
+                    width="auto"
+                    height="70px"
                   />
                 </TableCell>
-                <TableCell className={classes.tableContent} align="center">{row.name}</TableCell>
+                <TableCell className={classes.tableContent} align="center">{nameFormatter(row.name)}</TableCell>
                 <TableCell className={classes.tableContent} align="center">${row.price}</TableCell>
                 <TableCell className={classes.tableContent} align="center">{row.quantity}</TableCell>
                 <TableCell className={classes.tableContent} align="center">

@@ -1,6 +1,6 @@
 import React from "react";
 import  { useHistory } from "react-router-dom";
-import { Button, Grid } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import { shopRoute } from "../../utils/constants";
 import useStyles from "./styles";
 import { emptyConstants } from "./constants"
