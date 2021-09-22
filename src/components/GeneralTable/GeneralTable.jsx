@@ -41,7 +41,6 @@ const GeneralTable = ({ list, deleteItem }) => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {console.log(list)}
             {list.map((row) => (
               <TableRow key={row._id}>
                 <TableCell className={classes.imageProduct} align="center" component="th" scope="row">
