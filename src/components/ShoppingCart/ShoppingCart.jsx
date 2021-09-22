@@ -5,6 +5,7 @@ import EmptyCart from "../EmptyCart";
 import GeneralModal from "../../components/GeneralModal";
 import { deleteModal } from "../../utils/constants";
 import useStyles from "./styles";
+import { shoppingConstants } from "./constants";
 
 const ShoppingCart = ({
   nextStep,
@@ -32,7 +33,7 @@ const ShoppingCart = ({
       />
       {isEmpty ? (
         <>
-          <h2>carrito de compras</h2>
+          <h2>{shoppingConstants.title}</h2>
           <GeneralTable list={list} deleteItem={deleteItem} />
           <Grid
             container
@@ -40,15 +41,15 @@ const ShoppingCart = ({
           >
             <Grid item xs={12}>
               <span className={classes.totalCount}>
-                <strong>total:</strong> {subtotal}
+                <strong>{shoppingConstants.total}</strong> {subtotal}
               </span>
             </Grid>
             <Grid className={classes.buttons} item xs={12}>
               <Button onClick={nextStep} size="small" variant="contained">
-                finalizar compra
+                {shoppingConstants.buttonFinalize}
               </Button>
               <Button onClick={cleanCart} size="small" variant="contained">
-                vaciar carrito
+                {shoppingConstants.buttonEmpty}
               </Button>
             </Grid>
           </Grid>
