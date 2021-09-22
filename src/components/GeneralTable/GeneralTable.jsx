@@ -11,6 +11,7 @@ import {
 } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
 import useStyles from "./styles";
+import { tableTitle } from "./constants";
 
 const GeneralTable = ({ list, deleteItem }) => {
   const classes = useStyles();
@@ -26,12 +27,12 @@ const GeneralTable = ({ list, deleteItem }) => {
         >
           <TableHead>
             <TableRow>
-              <TableCell align="center">producto</TableCell>
-              <TableCell align="center">nombre</TableCell>
-              <TableCell align="center">precio</TableCell>
-              <TableCell align="center">cantidad</TableCell>
-              <TableCell align="center">subtotal</TableCell>
-              <TableCell align="center">acciones</TableCell>
+              {tableTitle.map((titleName, i) => (
+                <TableCell 
+                  key={i} 
+                  align="center"
+                  className={classes.tableTitle}>{titleName.title}</TableCell>
+              ))}
             </TableRow>
           </TableHead>
           <TableBody>
@@ -41,17 +42,17 @@ const GeneralTable = ({ list, deleteItem }) => {
                   <img
                     src={row.url}
                     alt="foto del producto"
-                    width="50px"
-                    height="50px"
+                    width="10px"
+                    height="10px"
                   />
                 </TableCell>
-                <TableCell align="center">{row.name}</TableCell>
-                <TableCell align="center">${row.price}</TableCell>
-                <TableCell align="center">{row.quantity}</TableCell>
-                <TableCell align="center">
+                <TableCell className={classes.tableContent} align="center">{row.name}</TableCell>
+                <TableCell className={classes.tableContent} align="center">${row.price}</TableCell>
+                <TableCell className={classes.tableContent} align="center">{row.quantity}</TableCell>
+                <TableCell className={classes.tableContent} align="center">
                   {calculateSubtotal(row.quantity, row.price)}
                 </TableCell>
-                <TableCell align="center">
+                <TableCell className={classes.tableContent} align="center">
                   <IconButton
                     className={classes.deleteButton}
                     onClick={() => deleteItem(row._id)}
