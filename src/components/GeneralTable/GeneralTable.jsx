@@ -12,6 +12,7 @@ import {
 import DeleteIcon from "@material-ui/icons/Delete";
 import useStyles from "./styles";
 import { tableTitle } from "./constants";
+import { moneyFormatter } from "../../utils/helpers/helpers";
 
 const GeneralTable = ({ list, deleteItem }) => {
   const classes = useStyles();
@@ -52,10 +53,10 @@ const GeneralTable = ({ list, deleteItem }) => {
                   />
                 </TableCell>
                 <TableCell className={classes.tableContent} align="center">{nameFormatter(row.name)}</TableCell>
-                <TableCell className={classes.tableContent} align="center">${row.price}</TableCell>
+                <TableCell className={classes.tableContent} align="center">{moneyFormatter(row.price)}</TableCell>
                 <TableCell className={classes.tableContent} align="center">{row.quantity}</TableCell>
                 <TableCell className={classes.tableContent} align="center">
-                  {calculateSubtotal(row.quantity, row.price)}
+                  {moneyFormatter(calculateSubtotal(row.quantity, row.price))}
                 </TableCell>
                 <TableCell className={classes.tableContent} align="center">
                   <IconButton
