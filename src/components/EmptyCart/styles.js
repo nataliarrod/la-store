@@ -4,8 +4,8 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > h3": {
-      fontFamily: "Dancing Script",
-      color: "#d91c84",
+      fontFamily: theme.typography.fontFamilySecondary,
+      color: theme.palette.main.pink,
       textTransform: "capitalize",
       marginTop: "5rem",
       [theme.breakpoints.up("xs")]: {
@@ -16,8 +16,8 @@ const useStyles = makeStyles((theme) => ({
       },
     },
     "& .MuiButtonBase-root": {
-      backgroundColor: "#d91c84",
-      color: "white",
+      backgroundColor: theme.palette.main.pink,
+      color: theme.palette.main.white,
       marginRight: "20px",
     },
   },
