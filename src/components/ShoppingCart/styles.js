@@ -3,29 +3,46 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
-    height: "622px",
     marginTop: "70px",
+    marginBottom: "300px",
     "& h2": {
       fontFamily: theme.typography.fontFamilySecondary,
       color: theme.palette.main.pink,
-      fontSize: theme.typography.h1.fontSize,
       textTransform: "capitalize",
+      fontSize: theme.typography.h3.fontSize,
+      [theme.breakpoints.up("lg")]: {
+        fontSize: theme.typography.h1.fontSize,
+      },
     },
   },
-  buttonContainer: {
-    marginTop: "30px",
-    "& .MuiButtonBase-root": {
-      backgroundColor: theme.palette.main.pink,
-      color: theme.palette.main.white,
-      marginRight: "20px",
-    },
+  buttonTotalContainer: {
+    display: "flex",
+    justifyContent: "center",
+    marginTop: "10px",
   },
   totalCount: {
+    display: "flex",
+    justifyContent: "flex-end",
     fontFamily: theme.typography.fontFamilySecondary,
     color: theme.palette.main.pink,
     textTransform: "uppercase",
-    fontSize: theme.typography.h5.fontSize,
     marginRight: "40px",
+    fontSize: theme.typography.h6.fontSize,
+    [theme.breakpoints.up("lg")]: {
+      fontSize: theme.typography.h5.fontSize,
+    },
+  },
+  buttons: {
+    display: "flex",
+    flexDirection: "column",
+    maxWidth: "180px",
+    marginTop: "10px",
+    "& Button": {
+      marginTop: "10px",
+      width: "100%",
+      backgroundColor: theme.palette.main.pink,
+      color: theme.palette.main.white,
+    },
   },
 }));
 

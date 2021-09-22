@@ -36,15 +36,14 @@ const ShoppingCart = ({
           <GeneralTable list={list} deleteItem={deleteItem} />
           <Grid
             container
-            direction="row-reverse"
-            className={classes.buttonContainer}
+            className={classes.buttonTotalContainer}
           >
-            <Grid item xs={4} align="right">
+            <Grid item xs={12}>
               <span className={classes.totalCount}>
                 <strong>total:</strong> {subtotal}
               </span>
             </Grid>
-            <Grid item xs={4}>
+            <Grid className={classes.buttons} item xs={12}>
               <Button onClick={nextStep} size="small" variant="contained">
                 finalizar compra
               </Button>
