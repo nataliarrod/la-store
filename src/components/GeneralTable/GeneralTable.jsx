@@ -44,12 +44,10 @@ const GeneralTable = ({ list, deleteItem }) => {
             {console.log(list)}
             {list.map((row) => (
               <TableRow key={row._id}>
-                <TableCell align="center" component="th" scope="row">
+                <TableCell className={classes.imageProduct} align="center" component="th" scope="row">
                   <img
                     src={row.image}
                     alt="foto del producto"
-                    width="auto"
-                    height="70px"
                   />
                 </TableCell>
                 <TableCell className={classes.tableContent} align="center">{nameFormatter(row.name)}</TableCell>
