@@ -6,6 +6,7 @@ import GeneralModal from "../../components/GeneralModal";
 import { deleteModal } from "../../utils/constants";
 import useStyles from "./styles";
 import { shoppingConstants } from "./constants";
+import { moneyFormatter } from "../../utils/helpers/helpers";
 
 const ShoppingCart = ({
   nextStep,
@@ -41,7 +42,7 @@ const ShoppingCart = ({
           >
             <Grid item xs={12}>
               <span className={classes.totalCount}>
-                <strong>{shoppingConstants.total}</strong> {subtotal}
+                <strong>{shoppingConstants.total}</strong> {moneyFormatter(subtotal)}
               </span>
             </Grid>
             <Grid className={classes.buttons} item xs={12}>

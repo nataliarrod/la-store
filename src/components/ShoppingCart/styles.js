@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     marginTop: "10px",
+     "& strong": {
+       marginRight: "10px",
+     },
   },
   totalCount: {
     display: "flex",
