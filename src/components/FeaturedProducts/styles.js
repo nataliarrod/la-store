@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-start",
     alignItems: "center",
     paddingLeft: "2rem",
+    [theme.breakpoints.up("lg")]: {
+      paddingLeft: "0",
+    },
     "& > h3": {
       fontFamily: theme.typography.fontFamilySecondary,
       color: theme.palette.main.pink,
