@@ -11,11 +11,17 @@ import {
 } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
 import useStyles from "./styles";
+import { tableTitle } from "./constants";
+import { moneyFormatter } from "../../utils/helpers/helpers";
 
 const GeneralTable = ({ list, deleteItem }) => {
   const classes = useStyles();
 
   const calculateSubtotal = (quantity, price) => quantity * price;
+
+  const nameFormatter = (str) => {
+    return str.toLowerCase();
+  };
 
   return (
       <TableContainer component={Paper} className={classes.root}>
@@ -26,32 +32,30 @@ const GeneralTable = ({ list, deleteItem }) => {
         >
           <TableHead>
             <TableRow>
-              <TableCell align="center">producto</TableCell>
-              <TableCell align="center">nombre</TableCell>
-              <TableCell align="center">precio</TableCell>
-              <TableCell align="center">cantidad</TableCell>
-              <TableCell align="center">subtotal</TableCell>
-              <TableCell align="center">acciones</TableCell>
+              {tableTitle.map((titleName, i) => (
+                <TableCell 
+                  key={i} 
+                  align="center"
+                  className={classes.tableTitle}>{titleName.title}</TableCell>
+              ))}
             </TableRow>
           </TableHead>
           <TableBody>
             {list.map((row) => (
               <TableRow key={row._id}>
-                <TableCell align="center" component="th" scope="row">
+                <TableCell className={classes.imageProduct} align="center" component="th" scope="row">
                   <img
-                    src={row.url}
+                    src={row.image}
                     alt="foto del producto"
-                    width="50px"
-                    height="50px"
                   />
                 </TableCell>
-                <TableCell align="center">{row.name}</TableCell>
-                <TableCell align="center">${row.price}</TableCell>
-                <TableCell align="center">{row.quantity}</TableCell>
-                <TableCell align="center">
-                  {calculateSubtotal(row.quantity, row.price)}
+                <TableCell className={classes.tableContent} align="center">{nameFormatter(row.name)}</TableCell>
+                <TableCell className={classes.tableContent} align="center">{moneyFormatter(row.price)}</TableCell>
+                <TableCell className={classes.tableContent} align="center">{row.quantity}</TableCell>
+                <TableCell className={classes.tableContent} align="center">
+                  {moneyFormatter(calculateSubtotal(row.quantity, row.price))}
                 </TableCell>
-                <TableCell align="center">
+                <TableCell className={classes.tableContent} align="center">
                   <IconButton
                     className={classes.deleteButton}
                     onClick={() => deleteItem(row._id)}
