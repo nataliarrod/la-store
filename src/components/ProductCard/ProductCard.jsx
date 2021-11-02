@@ -23,13 +23,16 @@ const ProductCard = (props) => {
 
   const [quantity, setQuantity] = useState(0);
   const [openModal, setOpenModal] = useState(false);
+  const [openWPModal, setOpenWPModal] = useState(false);
 
   const increaseQuantity = () => {
     const newQuantity = quantity < product.stock ? quantity + 1 : quantity;
     setQuantity(newQuantity);
+    if (quantity === product.stock) {
+      setOpenWPModal(true)
+    };
   };
 
-  
   const redirectToOrder = () => {
     History.push(orderRoute);
   };
@@ -44,7 +47,7 @@ const ProductCard = (props) => {
     setOpenModal(true);
     takeProduct(product, quantity);
     setQuantity(0);
-  }
+  };
 
   return (
     <div className={classes.productCard} key={`product-card-${product._id}`}>
@@ -121,6 +124,14 @@ const ProductCard = (props) => {
                 {modalConstants.buttonStore}
               </Button>
             </div>
+          </GeneralModal>
+          <GeneralModal
+            openModal={openWPModal}
+            setOpenModal={setOpenWPModal}
+            title={"¡Escribenos!"}
+            message={"En bodega no contamos con la cantidad de unidades que necesitas, escribenos y te avisaremos en cuanto tengamos más"}
+          >
+            
           </GeneralModal>
         </>
       ) : null}
