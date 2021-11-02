@@ -5,10 +5,12 @@ import RemoveIcon from "@material-ui/icons/Remove";
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import useStyles from "./styles";
 import GeneralModal from "../GeneralModal";
+import WPButton from "../SocialButtons/WPButton/WPButton";
 import  { useHistory } from "react-router-dom";
 import { orderRoute } from "../../utils/constants";
 import { moneyFormatter } from "../../utils/helpers/helpers";
 import productCardConstants, { modalConstants } from "./constants";
+
 
 
 const ProductCard = (props) => {
@@ -131,7 +133,7 @@ const ProductCard = (props) => {
             title={"¡Escribenos!"}
             message={"En bodega no contamos con la cantidad de unidades que necesitas, escribenos y te avisaremos en cuanto tengamos más"}
           >
-            
+            <WPButton/>
           </GeneralModal>
         </>
       ) : null}
