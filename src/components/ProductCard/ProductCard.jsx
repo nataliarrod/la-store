@@ -5,10 +5,12 @@ import RemoveIcon from "@material-ui/icons/Remove";
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import useStyles from "./styles";
 import GeneralModal from "../GeneralModal";
+import WhatsappButton from "../SocialButtons/WhatsappButton/WhatsappButton";
 import  { useHistory } from "react-router-dom";
 import { orderRoute } from "../../utils/constants";
 import { moneyFormatter } from "../../utils/helpers/helpers";
-import productCardConstants, { modalConstants } from "./constants";
+import productCardConstants, { modalConstants, modalWPConstants } from "./constants";
+
 
 
 const ProductCard = (props) => {
@@ -23,13 +25,16 @@ const ProductCard = (props) => {
 
   const [quantity, setQuantity] = useState(0);
   const [openModal, setOpenModal] = useState(false);
+  const [openWPModal, setOpenWPModal] = useState(false);
 
   const increaseQuantity = () => {
     const newQuantity = quantity < product.stock ? quantity + 1 : quantity;
     setQuantity(newQuantity);
+    if (quantity === product.stock) {
+      setOpenWPModal(true)
+    };
   };
 
-  
   const redirectToOrder = () => {
     History.push(orderRoute);
   };
@@ -44,7 +49,7 @@ const ProductCard = (props) => {
     setOpenModal(true);
     takeProduct(product, quantity);
     setQuantity(0);
-  }
+  };
 
   return (
     <div className={classes.productCard} key={`product-card-${product._id}`}>
@@ -121,6 +126,14 @@ const ProductCard = (props) => {
                 {modalConstants.buttonStore}
               </Button>
             </div>
+          </GeneralModal>
+          <GeneralModal
+            openModal={openWPModal}
+            setOpenModal={setOpenWPModal}
+            title={modalWPConstants.title}
+            message={modalWPConstants.message}
+          >
+            <WhatsappButton color="pink" size="large" />
           </GeneralModal>
         </>
       ) : null}
