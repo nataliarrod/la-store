@@ -5,11 +5,11 @@ import RemoveIcon from "@material-ui/icons/Remove";
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import useStyles from "./styles";
 import GeneralModal from "../GeneralModal";
-import WPButton from "../SocialButtons/WPButton/WPButton";
+import WhatsappButton from "../SocialButtons/WhatsappButton/WhatsappButton";
 import  { useHistory } from "react-router-dom";
 import { orderRoute } from "../../utils/constants";
 import { moneyFormatter } from "../../utils/helpers/helpers";
-import productCardConstants, { modalConstants } from "./constants";
+import productCardConstants, { modalConstants, modalWPConstants } from "./constants";
 
 
 
@@ -130,10 +130,10 @@ const ProductCard = (props) => {
           <GeneralModal
             openModal={openWPModal}
             setOpenModal={setOpenWPModal}
-            title={"¡Escribenos!"}
-            message={"En bodega no contamos con la cantidad de unidades que necesitas, escribenos y te avisaremos en cuanto tengamos más"}
+            title={modalWPConstants.title}
+            message={modalWPConstants.message}
           >
-            <WPButton/>
+            <WhatsappButton color="pink" size="large" />
           </GeneralModal>
         </>
       ) : null}
