@@ -67,11 +67,6 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: theme.palette.main.pink,
     },
   },
-  buttonWhatsapp: {
-    height: "300",
-    color: "pink",
-    backgroundColor: "red",
-  },
 }));
 
 export default useStyles;
