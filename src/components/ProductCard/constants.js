@@ -3,6 +3,7 @@ const productCardConstants = {
 }
 
 export const modalConstants = {
+  title: "Producto agregado",
   buttonOrder: "ir al carrito",
   buttonStore: "seguir comprando",
 };

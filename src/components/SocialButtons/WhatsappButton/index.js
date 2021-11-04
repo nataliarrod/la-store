@@ -1,3 +1,3 @@
-import WPButton from "./WPButton";
+import WhatsappButton from "./WhatsappButton";
 
-export default WPButton;
+export default WhatsappButton;
