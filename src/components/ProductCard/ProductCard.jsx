@@ -25,7 +25,6 @@ const ProductCard = (props) => {
 
   const [quantity, setQuantity] = useState(0);
   const [openModal, setOpenModal] = useState(false);
-  // const [openWPModal, setOpenWPModal] = useState(false);
   const [isRequestingStock, setIsRequestingStock] = useState(false);
 
   const modalTitle = isRequestingStock ? modalWPConstants.title : modalConstants.title;
@@ -35,7 +34,6 @@ const ProductCard = (props) => {
     const newQuantity = quantity < product.stock ? quantity + 1 : quantity;
     setQuantity(newQuantity);
     if (quantity === product.stock) {
-      // setOpenWPModal(true)}
       setIsRequestingStock(true);
       setOpenModal(true);
     };
@@ -119,33 +117,30 @@ const ProductCard = (props) => {
             title={modalTitle}
             message={modalMessage}
           >
-            <div className={classes.buttonsModal}>
-              <Button
-                className={classes.buttonGrad}
-                classvariant="contained"
-                type="button"
-                onClick={redirectToOrder}
-              >
-                {modalConstants.buttonOrder}
-              </Button>
-              <Button
-                className={classes.buttonGrad}
-                classvariant="contained"
-                type="button"
-                onClick={() => setOpenModal(false)}
-              >
-                {modalConstants.buttonStore}
-              </Button>
-            </div>
+            {isRequestingStock && (
+              <WhatsappButton color="pink" size="large" />
+            )}
+            {!isRequestingStock && (
+              <div className={classes.buttonsModal}>
+                <Button
+                  className={classes.buttonGrad}
+                  classvariant="contained"
+                  type="button"
+                  onClick={redirectToOrder}
+                >
+                  {modalConstants.buttonOrder}
+                </Button>
+                <Button
+                  className={classes.buttonGrad}
+                  classvariant="contained"
+                  type="button"
+                  onClick={() => setOpenModal(false)}
+                >
+                  {modalConstants.buttonStore}
+                </Button>
+              </div>
+            )}
           </GeneralModal>
-          {/* <GeneralModal
-            openModal={openWPModal}
-            setOpenModal={setOpenWPModal}
-            title={modalWPConstants.title}
-            message={modalWPConstants.message}
-          >
-            <WhatsappButton color="pink" size="large" />
-          </GeneralModal> */}
         </>
       ) : null}
     </div>
