@@ -49,8 +49,8 @@ const ProductCard = (props) => {
   };
 
   const onModalClose = () => {
-    setIsRequestingStock(false);
     setOpenModal(false);
+    setIsRequestingStock(false);
   };
 
   const takeProductToCart = () => {
@@ -117,8 +117,7 @@ const ProductCard = (props) => {
             title={modalTitle}
             message={modalMessage}
           >
-            {isRequestingStock
-              ? 
+            {isRequestingStock ? 
               <SocialButton type="whatsapp" color="pink" size="large" /> 
               :
               <div className={classes.buttonsModal}>
