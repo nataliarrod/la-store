@@ -5,7 +5,7 @@ import RemoveIcon from "@material-ui/icons/Remove";
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import useStyles from "./styles";
 import GeneralModal from "../GeneralModal";
-import WhatsappButton from "../SocialButtons/WhatsappButton/WhatsappButton";
+import SocialButton from "../SocialButton/SocialButton";
 import  { useHistory } from "react-router-dom";
 import { orderRoute } from "../../utils/constants";
 import { moneyFormatter } from "../../utils/helpers/helpers";
@@ -25,13 +25,17 @@ const ProductCard = (props) => {
 
   const [quantity, setQuantity] = useState(0);
   const [openModal, setOpenModal] = useState(false);
-  const [openWPModal, setOpenWPModal] = useState(false);
+  const [isRequestingStock, setIsRequestingStock] = useState(false);
+
+  const modalTitle = isRequestingStock ? modalWPConstants.title : modalConstants.title;
+  const modalMessage = isRequestingStock ? modalWPConstants.message : `Agregaste ${product.name} al carrito`;
 
   const increaseQuantity = () => {
     const newQuantity = quantity < product.stock ? quantity + 1 : quantity;
     setQuantity(newQuantity);
     if (quantity === product.stock) {
-      setOpenWPModal(true)
+      setIsRequestingStock(true);
+      setOpenModal(true);
     };
   };
 
@@ -42,6 +46,11 @@ const ProductCard = (props) => {
   const decreaseQuantity = () => {
     const newQuantity = !quantity ? 0 : quantity - 1;
     setQuantity(newQuantity);
+  };
+
+  const onModalClose = () => {
+    setOpenModal(false);
+    setIsRequestingStock(false);
   };
 
   const takeProductToCart = () => {
@@ -104,36 +113,32 @@ const ProductCard = (props) => {
           </Button>
           <GeneralModal
             openModal={openModal}
-            setOpenModal={setOpenModal}
-            title={"Producto agregado"}
-            message={`Agregaste ${product.name} al carrito`}
+            setOpenModal={onModalClose}
+            title={modalTitle}
+            message={modalMessage}
           >
-            <div className={classes.buttonsModal}>
-              <Button
-                className={classes.buttonGrad}
-                classvariant="contained"
-                type="button"
-                onClick={redirectToOrder}
-              >
-                {modalConstants.buttonOrder}
-              </Button>
-              <Button
-                className={classes.buttonGrad}
-                classvariant="contained"
-                type="button"
-                onClick={() => setOpenModal(false)}
-              >
-                {modalConstants.buttonStore}
-              </Button>
-            </div>
-          </GeneralModal>
-          <GeneralModal
-            openModal={openWPModal}
-            setOpenModal={setOpenWPModal}
-            title={modalWPConstants.title}
-            message={modalWPConstants.message}
-          >
-            <WhatsappButton color="pink" size="large" />
+            {isRequestingStock ? 
+              <SocialButton type="whatsapp" color="pink" size="large" /> 
+              :
+              <div className={classes.buttonsModal}>
+                <Button
+                  className={classes.buttonGrad}
+                  classvariant="contained"
+                  type="button"
+                  onClick={redirectToOrder}
+                >
+                  {modalConstants.buttonOrder}
+                </Button>
+                <Button
+                  className={classes.buttonGrad}
+                  classvariant="contained"
+                  type="button"
+                  onClick={() => setOpenModal(false)}
+                >
+                  {modalConstants.buttonStore}
+                </Button>
+              </div>
+            }
           </GeneralModal>
         </>
       ) : null}
