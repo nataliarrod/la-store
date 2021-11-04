@@ -42,7 +42,10 @@ const useStyles = makeStyles((theme) => ({
   tableContent: {
     fontSize: theme.typography.body2.fontSize,
     color: theme.palette.main.gray,
-    textTransform: "Capitalize",
+    textTransform: "lowercase",
+    "&::first-letter": {
+      textTransform: "capitalize",
+    },
     [theme.breakpoints.up("sm")]: {
       fontSize: theme.typography.link.fontSize,
     },
