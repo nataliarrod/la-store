@@ -5,7 +5,7 @@ import RemoveIcon from "@material-ui/icons/Remove";
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import useStyles from "./styles";
 import GeneralModal from "../GeneralModal";
-import WhatsappButton from "../SocialButtons/WhatsappButton/WhatsappButton";
+import SocialButton from "../SocialButton/SocialButton";
 import  { useHistory } from "react-router-dom";
 import { orderRoute } from "../../utils/constants";
 import { moneyFormatter } from "../../utils/helpers/helpers";
@@ -118,7 +118,7 @@ const ProductCard = (props) => {
             message={modalMessage}
           >
             {isRequestingStock && (
-              <WhatsappButton color="pink" size="large" />
+              <SocialButton type="whatsapp" color="pink" size="large" />
             )}
             {!isRequestingStock && (
               <div className={classes.buttonsModal}>
