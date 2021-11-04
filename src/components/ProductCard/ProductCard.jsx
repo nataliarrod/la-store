@@ -117,10 +117,10 @@ const ProductCard = (props) => {
             title={modalTitle}
             message={modalMessage}
           >
-            {isRequestingStock && (
-              <SocialButton type="whatsapp" color="pink" size="large" />
-            )}
-            {!isRequestingStock && (
+            {isRequestingStock
+              ? 
+              <SocialButton type="whatsapp" color="pink" size="large" /> 
+              :
               <div className={classes.buttonsModal}>
                 <Button
                   className={classes.buttonGrad}
@@ -139,7 +139,7 @@ const ProductCard = (props) => {
                   {modalConstants.buttonStore}
                 </Button>
               </div>
-            )}
+            }
           </GeneralModal>
         </>
       ) : null}
