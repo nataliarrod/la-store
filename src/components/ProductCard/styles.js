@@ -7,9 +7,13 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    textTransform: "capitalize",
     fontSize: theme.typography.body1.fontSize,
     padding: "30px",
+    textAlign: "center",
+    textTransform: "lowercase",
+    "&  > h4::first-letter": {
+      textTransform: "capitalize",
+    },
     [theme.breakpoints.up("lg")]: {
       fontSize: theme.typography.fontSize,
     },
