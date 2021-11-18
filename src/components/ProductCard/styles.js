@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   productCard: {
+    height: "380px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
