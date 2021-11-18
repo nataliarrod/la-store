@@ -12,17 +12,41 @@ const StoreContainer = () => {
   const classes = useStyles();
   const store = useSelector(state => state.storeReducer.store);
   const [state, setState] = useState({
-    checkedA: false,
-    checkedB: false,
-    checkedC: false,
-    checkedD: false,
-    checkedE: false,
+    velas: false,
+    oraculos: false,
+    cursos: false,
+    cuarzos: false,
+    joyeria: false,
   });
+  const [filteredStore, setFilteredStore] = useState([])
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (!store.length) dispatch(fetchStoreProducts());
   }, [dispatch, store]);
+
+  useEffect(() => {
+    if (Object.values(state).every((item => item === false))) {
+      setFilteredStore(store)
+    } else {
+      let categories = setCategories(state);
+      let arrayFiltered = store.filter(item => {
+        return categories.indexOf(item.category) > -1
+      })
+      setFilteredStore(arrayFiltered)
+    }
+  }, [state, store])
+
+  const setCategories = (obj) => {
+    let categoryArray = Object.keys(obj);
+    let categoriesChecked = [];
+    categoryArray.forEach(item => {
+      if (obj[item]) {
+        categoriesChecked.push(item)
+      }
+    }) 
+    return categoriesChecked;
+  }
 
   const handleChange = (event) => {
     const newState = { ...state };
@@ -63,7 +87,7 @@ const StoreContainer = () => {
       </Grid>
       <Grid item xs={12} md={8} lg={9}>
         <List
-          list={store}
+          list={filteredStore}
           takeProduct={takeProduct}
           className={classes.list}
         />

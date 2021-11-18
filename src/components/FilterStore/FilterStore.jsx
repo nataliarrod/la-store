@@ -13,9 +13,9 @@ const FilterStore = (props) => {
         <FormControlLabel
           control={
             <Checkbox
-              checked={state.checkedA}
+              checked={state.velas}
               onChange={handleChange}
-              name="checkedA"
+              name="velas"
               color="secondary"
               aria-describedby= "checkbox para filtrar las categorias "
               aria-checked="false"
@@ -26,9 +26,9 @@ const FilterStore = (props) => {
         <FormControlLabel
           control={
             <Checkbox
-              checked={state.checkedB}
+              checked={state.oraculos}
               onChange={handleChange}
-              name="checkedB"
+              name="oraculos"
               color="secondary"
               aria-describedby= "checkbox para filtrar las categorias "
               aria-checked="false"
@@ -39,9 +39,9 @@ const FilterStore = (props) => {
         <FormControlLabel
           control={
             <Checkbox
-              checked={state.checkedC}
+              checked={state.cursos}
               onChange={handleChange}
-              name="checkedC"
+              name="cursos"
               color="secondary"
               aria-describedby= "checkbox para filtrar las categorias "
               aria-checked="false"
@@ -52,9 +52,9 @@ const FilterStore = (props) => {
         <FormControlLabel
           control={
             <Checkbox
-              checked={state.checkedD}
+              checked={state.cuarzos}
               onChange={handleChange}
-              name="checkedD"
+              name="cuarzos"
               color="secondary"
               aria-describedby= "checkbox para filtrar las categorias "
               aria-checked="false"
@@ -65,9 +65,9 @@ const FilterStore = (props) => {
         <FormControlLabel
           control={
             <Checkbox
-              checked={state.checkedE}
+              checked={state.joyeria}
               onChange={handleChange}
-              name="checkedE"
+              name="joyeria"
               color="secondary"
               aria-describedby= "checkbox para filtrar las categorias "
               aria-checked="false"
