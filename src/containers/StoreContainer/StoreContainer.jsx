@@ -29,15 +29,15 @@ const StoreContainer = () => {
     if (Object.values(state).every((item => item === false))) {
       setFilteredStore(store)
     } else {
-      let getCategories = setGetCategories(state);
+      let categories = getCategories(state);
       let arrayFiltered = store.filter(item => {
-        return getCategories.indexOf(item.category) > -1
+        return categories.indexOf(item.category) > -1
       })
       setFilteredStore(arrayFiltered)
     }
   }, [state, store])
 
-  const setGetCategories = (obj) => {
+  const getCategories = (obj) => {
     let categoryArray = Object.keys(obj);
     let categoriesChecked = [];
     categoryArray.forEach(item => {
