@@ -9,8 +9,6 @@ You can find all of my projects available at https://github.com/nataliarrod
 Connect with me:
 https://www.linkedin.com/in/natalia-r-39900a163/
 
-Linea Ancestral is a personal project for our familiar company, you can find us in our social networks facebook, instagram, youtube
-
 la-store.vercel.app
 
 Languages and Tools I used:
